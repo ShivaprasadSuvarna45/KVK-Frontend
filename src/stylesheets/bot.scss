@@ -1,0 +1,44 @@
+.bots-container {
+	position:fixed;
+	bottom:100px;
+	right:50px;
+	.text {
+		border-radius    : 4px;
+		background-color : #ffffff;
+		box-shadow       : 0 6px 24px 0 rgba(0, 0, 0, 0.2);
+		text-align       : center;
+		padding: 30px;
+		display: inline-block;
+		margin-top: 30px;
+		    margin-right: 3px;
+		    position:relative;
+		p {
+			font-size: 25px;
+    		font-weight: 300;
+		}
+	}
+	.text-arrow {
+		position: absolute;
+    bottom: 57%;
+    right: -4px;
+    height: 31px;
+    width: 30px;
+    background-color: #fff;
+    margin-left: -13px;
+    margin-bottom: -19px;
+    z-index: -1;
+    box-shadow: 0 0 10px #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+	}
+	
+	img {
+		width:200px;
+		display: inline-block;
+		vertical-align: -webkit-baseline-middle;
+		margin-top: -58px;
+	}
+}

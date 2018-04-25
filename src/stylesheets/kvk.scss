@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body,html{
+  font-family: 'Lato', sans-serif;
+}
+
+.loginFormContainer{
+	width:50%;
+	margin-top:10%;
+
+}
+
+.appcontainer{
+	padding:0px;
+	margin:0px;
+}
+
+.headercontainer{
+   background: #21242e;
+   border-bottom: 1px solid #000;
+   width: 100%;
+   z-index: 400;
+   top: 0;
+   height: 60px;
+   position: fixed;
+}
+
+.inner-container{
+	top:60px;
+	position:relative;
+}
+
+
+.rewindFont{
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+}
+.countdownFont{
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+}
+.head_nav_style{
+  border-radius: 0px;
+  margin-bottom: 0px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+}
+.head_font_color{
+  color: #0d25f5 !important;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+  background-color:transparent;
+}
+.home_countdown_block{
+	background-color: #979036;
+	border-radius: 5px;
+	width: 60px;
+	text-align: center;
+  padding: 10px 0px 10px 0px;
+  margin: auto;
+}
+.home_align_col_center{
+  text-align: center;
+}
+.home_countdown_letter{
+	color: #fff;
+  font-size: 20px;
+}
+.home_days{
+	color: #fff;
+  font-size: 11px;
+}
+.home_description{
+	text-align: justify;
+  font-size: 16px;
+  line-height: 30px;
+}
+.home_carosal_desc{
+  position: absolute;
+  font-size: 25px;
+  bottom: 43%;
+  color: #fff; // rgb(12, 204, 207);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.home_want_to_see{
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-bottom: 1%;
+  font-size: 15px;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #337ab7;
+}
+.footer_head{
+	color: #f8e71c;
+	font-size: 20px;
+	text-decoration: underline;
+}
+.footer_desc{
+	font-size: 15px;
+  color: #fff;
+}
+
+.footer_fbIcon{
+	height: 50px !important;
+  width: 50px !important;
+  color: #fff;
+	margin-top: 10px;
+}
+
+.modal1_head{
+	color: rgb(74, 74, 74);
+  font-size: 12px;
+  //padding-left: 11px;
+}
+
+.modal1_inputemail{
+	color: #4a4a4a;
+  text-align: center;
+  width: 70%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+	border: none;
+  background-color: #d8d8d8;
+	//margin-left: 11px;
+}
+
+.modal1_bottom_container{
+	border: none;
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.modal1_submit{
+	width: 61%;
+  height: 35px;
+  background-color: #4a4a4a;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.modal1_thanks{
+	padding-top: 10px;
+}
+
+.removpos{
+	position: inherit !important;
+}
+
+.dropdwn_setting{
+	right: 0 !important;
+	left: auto !important;
+	padding: 50px;
+	padding-top: 50px;
+	border-radius: 5px;
+}
+
+
+.profile_inputs{
+	width: 51%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  border: 1px solid;
+  border-radius: 3px
+}
+.profile_desc{
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	width: 70%;
+	text-align: justify;
+}
+.profile_textarea{
+	width: 72%;
+  height: 100px;
+  text-align: justify;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.profile_arrival{
+	width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 5px;
+}
+.profile_Accom{
+	font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.profile_Accom_dropDown{
+	width: 40%;
+  padding: 5px;
+  border-radius: 4px;
+  height: 40px;
+}
+.profile_amts{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border: 1px solid;
+}
+.profile_update_btn{
+	width: 30%;
+  height: 35px;
+  background-color: #4a4a4a;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.gallery_search_design{
+  margin-left: 5%;
+  width: 30%;
+  border-radius: 2px;
+  border: 1px solid;
+  padding: 6px;
+}
+body{
+
+    color: #4a4a4a;
+    text-align: left;
+}
+
+.text-about{
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.text{
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.subtext{
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+table{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+th,td{
+  padding: 6px;
+}
+
+
+.pancard{
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.text-table{
+    width: 100%;
+}
+.close_btn{
+	font-size: 40px;
+  margin-right: 13px;
+  margin-top: -16px;
+}
