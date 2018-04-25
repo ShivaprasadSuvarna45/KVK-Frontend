@@ -26,16 +26,16 @@ export default class Gallery extends Component{
                         <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
                     </div>
@@ -43,16 +43,16 @@ export default class Gallery extends Component{
                         <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
                     </div>
@@ -60,16 +60,16 @@ export default class Gallery extends Component{
                         <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3">
-                                <img src="./public/images/KVK_grp.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
                     </div>
