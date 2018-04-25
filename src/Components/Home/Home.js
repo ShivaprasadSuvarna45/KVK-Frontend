@@ -41,30 +41,30 @@ export default class Home extends Component{
                   </ol>
 
 
-                  <div className="carousel-inner" style={{height:"400px"}} >
-                      <div className="item active" style={{height:"400px"}}>
+                  <div className="carousel-inner" style={{height:"541px"}} >
+                      <div className="item active" style={{height:"541px"}}>
                         <p className="home_carosal_desc">Where we learnt the alphabet of language</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683847/KVK1.jpg" alt="KVK1" style={{width:"100%",height:"400px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683847/KVK1.jpg" alt="KVK1" style={{width:"100%",height:"541px"}}/>
                       </div>
 
-                      <div className="item" style={{height:"400px"}}>
+                      <div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">And the Math for Life</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK2" style={{width:"100%", height:"400px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK2" style={{width:"100%", height:"541px"}}/>
                       </div>
 
-                      <div className="item" style={{height:"400px"}}>
+                      <div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">Played as if there was no morrow</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683975/KVK3.jpg" alt="KVK3" style={{width:"100%", height:"400px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683975/KVK3.jpg" alt="KVK3" style={{width:"100%", height:"541px"}}/>
                       </div>
 
-											<div className="item" style={{height:"400px"}}>
+											<div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK4" style={{width:"100%", height:"400px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK4" style={{width:"100%", height:"541px"}}/>
                       </div>
 
-											<div className="item" style={{height:"400px"}}>
+											<div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">And made lifelong friends</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK5" style={{width:"100%", height:"400px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK5" style={{width:"100%", height:"541px"}}/>
                       </div>
                   </div>
 
