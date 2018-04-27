@@ -30,7 +30,7 @@ export default class Home extends Component{
 
 
           <div className="container" style={{width:"100%", padding:0}}>
-              <div id="myCarousel" className="carousel slide" data-ride="carousel">
+              <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="2000">
 
                   <ol className="carousel-indicators" style={{bottom:"0px"}}>
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -49,7 +49,7 @@ export default class Home extends Component{
 
                       <div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">And the Math for Life</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK2" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK2" style={{width:"100%", height:"541px"}}/>
                       </div>
 
                       <div className="item" style={{height:"541px"}}>
@@ -59,12 +59,12 @@ export default class Home extends Component{
 
 											<div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK4" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK4" style={{width:"100%", height:"541px"}}/>
                       </div>
 
 											<div className="item" style={{height:"541px"}}>
                         <p className="home_carosal_desc">And made lifelong friends</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK5" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK5" style={{width:"100%", height:"541px"}}/>
                       </div>
                   </div>
 
@@ -120,20 +120,19 @@ export default class Home extends Component{
         </div>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-8 col-lg-8" style={{padding:"30px"}}>
-                    <div style={{textAlign:"center"}} ><img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683767/KVK_logo.jpg" style={{width:"250px",height:"200px"}} /></div><br/>
-                    <p className="home_description">Yes. It is. Happening. On the 22nd of December 2016, a group of dapper men and elegant women from all over the world will gather at the Karnataka Regional Engineering College, Surathkal.</p>
-                    <p className="home_description">The 1987 monsoon season was in full flow. 350 wide-eyed girls and boys from all over the country made their way to this college on the beach. To study engineering, they would have told you. In the years that followed, these young men and women learnt to experience and appreciate mess food, sunsets on the beach (or maybe sunrises?), night-outs, weekly SAC movies, food supplements (Basheer, Purusha,…), spiritual nourishment, music, photography, sports, cultural fests, rock shows, cosy library corners and so much more. In the midst of all this activity, they found the time to write some exams and earn their engineering degrees.</p>
-                    <p className="home_description">And then they left. Dispersed to the nine winds like so many fungal spores. Carrying some of the best moments and memories of their lives, and some of their most cherished and valued friendships.</p>
-                    <p className="home_description">And now, a full circle later, KREC calls again!
-So mark the dates in your calendars, ladies and gentlemen. We will meet on campus, from the 22nd to the 24th of December, 2016. To celebrate our time together at KREC, to toast to the 25 years that have gone by, to renew ourselves and our friendships.</p>
-                    <p className="home_description">Be there. With your families. Relive your story.</p>
+                <div className="col-sm-8 col-lg-8" style={{padding:"30px",paddingTop:"40px"}}>
+                    
+                    <p className="home_description">No one in this world is rich enough to buy his own childhood and youth back. Only old friends help to recreate those moments from time to time.</p>
+                    <p className="home_description">And to do this - The first grand reunion of all of us who went to study in Kendriya Vidyalaya Kudremukh is happening on August 11th 2018 at Bengaluru – for you to Relive the years spent at the school and Kudremukh in a one day time-lapse, if you will.</p>
+                    <p className="home_description">From 1978 to 2015 the school was the nursery that nurtured and shaped young minds. The harvest from that nursery is now spread out across the world engaged in their pursuit of life. However far we may have come from there, the school and the place remain an inseparable part of our lives.</p>
+                    <p className="home_description">While we cannot go back there as the school is closed and Kudremukh is now a reserve forest area the magic of our childhood will be recreated on August 11th 2018 at the “Chota school Bada Reunion”</p>
+                    <p className="home_description">Be there. With your spouses. Relive the time of your life.</p>
                 </div>
 								
-                <div className="col-sm-3 col-lg-3" style={{padding:"30px",paddingTop:"22.5%",marginLeft:"30px"}}>
+                <div className="col-sm-3 col-lg-3" style={{padding:"30px",paddingTop:"2%",marginLeft:"30px"}}>
 											<p className="home_description">Lots Of Friends are coming</p>
                       <span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>1990-2000</span><br/>
+                      <span style={{float:"right"}}>1978-1985</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
 											  aria-valuemin="0" aria-valuemax="100" style={{width:"50%"}}>
@@ -142,7 +141,7 @@ So mark the dates in your calendars, ladies and gentlemen. We will meet on campu
 											</div>
 
 											<span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>2000-2010</span><br/>
+                      <span style={{float:"right"}}>1986-1995</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
 											  aria-valuemin="0" aria-valuemax="100" style={{width:"75%"}}>
@@ -151,13 +150,42 @@ So mark the dates in your calendars, ladies and gentlemen. We will meet on campu
 											</div>
 
 											<span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>2010-2015</span><br/>
+                      <span style={{float:"right"}}>1996-2000</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
 											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
+
+                      <span style={{float:"left"}}>Batch</span>
+                      <span style={{float:"right"}}>2001-2005</span><br/>
+											<div className="progress">
+											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											    <span className="sr-only">87</span>
+											  </div>
+											</div>
+
+                      <span style={{float:"left"}}>Batch</span>
+                      <span style={{float:"right"}}>2006-2010</span><br/>
+											<div className="progress">
+											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											    <span className="sr-only">87</span>
+											  </div>
+											</div>
+
+                      <span style={{float:"left"}}>Batch</span>
+                      <span style={{float:"right"}}>2011-2015</span><br/>
+											<div className="progress">
+											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											    <span className="sr-only">87</span>
+											  </div>
+											</div>
+
+
                 </div>
                 <div className="col-sm-1 col-lg-1"></div>
             </div>

@@ -1,7 +1,13 @@
 import React,{Component} from 'react';
 import {BrowserRouter as Router , Link ,Route } from 'react-router-dom'
+import store from "../../Store/store";
+import {loginUSer} from "../../Store/Actions/LoginAction";
+import {registerUSer} from "../../Store/Actions/RegisterAction";
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import API_UTIL from "../../API/Api";
 
-export default class Header extends Component{
+class Header extends Component{
 	constructor(props){
 		super(props)
 
@@ -9,41 +15,62 @@ export default class Header extends Component{
 		this._logout = this._logout.bind(this);
 		this._login = this._login.bind(this);
 		this._regOpen = this._regOpen.bind(this);
-
+		
 		this.state = {
-			submitState: false,
-			login:false
+			login:false,
+			regDeails : {
+				email: '',
+				batch: '',
+				name:''
+			},
+			isTop: true
 		}
 	}
 	componentDidMount(){
-
+		let isTop = false;
+		document.addEventListener('scroll', () => {
+			if (window.scrollY < 100) {
+				$("#headnav").addClass("navtransparent");
+				$("#newid").addClass("navblack");
+				$("#newid").removeClass("navwhite");
+			}
+			else{
+				$("#headnav").removeClass("navtransparent");
+				$("#newid").addClass("navwhite");
+				$("#newid").removeClass("navblack");
+			}
+		  });
 	}
 
 	_submitmail(){
-		console.log("Hi");
-		this.setState({submitState:true})
-
+		let regVals = {	};
+		regVals.email = document.getElementById("regemail").value.trim();
+		regVals.batch = document.getElementById("regbatch").value.trim();
+		regVals.name = document.getElementById("regname").value.trim();
+		API_UTIL.registerUser(regVals);
 	}
 	_regOpen(){
 		console.log("Hi");
-		this.setState({submitState:false})
 	}
 	_logout(){
-		console.log("Hi");
-		this.setState({login:false})
+		store.dispatch({type:"LOGOUT_USER"});
 	}
 
 	_login(){
-		console.log("Hi");
-		this.setState({login:true})
+		let loginCred = {};		
+		loginCred.email = document.getElementById("loginemail").value.trim();
+		loginCred.password = document.getElementById("loginpassword").value.trim();
+		API_UTIL.loginUser(loginCred);
 	}
 
 	_renderLogin(){
-		if(this.state.login){
+		if(this.props.islogin){
 			return(
-				<ul className="nav navbar-nav" style={{float:"right"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
+					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
+					<li><Link className="head_font_color" to="/Gallery">GALLERY</Link></li>
 					<li><Link className="head_font_color" to="/Profile">My Profile</Link></li>
 					<li onClick={this._logout}><Link className="head_font_color" to="/">Logout</Link></li>
 				</ul>
@@ -51,12 +78,8 @@ export default class Header extends Component{
 		}
 		else{
 			return(
-				<ul className="nav navbar-nav" style={{float:"right"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
-					<li><Link className="head_font_color" to="/About">About</Link></li>
-					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
-					<li><Link className="head_font_color" to="/Gallery">GALERY</Link></li>
-					<li><Link className="head_font_color" to="/Profile">My Profile</Link></li>
 					<li><a className="head_font_color" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Register</a></li>
 					<li className="dropdown removpos">
 							<a className="dropdown-toggle head_font_color" data-toggle="dropdown" href="#">Login
@@ -65,11 +88,11 @@ export default class Header extends Component{
 
 									<form>
 											<p>Email</p>
-											<input type="email" placeholder="Enter email id" className="modal1_inputemail" style={{width:"250px"}}/><br/><br/>
+											<input id="loginemail" type="email" placeholder="Enter email id" className="modal1_inputemail" style={{width:"250px"}}/><br/><br/>
 											<p>Password</p>
-											<input type="password" placeholder="Enter password" className="modal1_inputemail" style={{width:"250px"}}/>
+											<input id="loginpassword" type="password" placeholder="Enter password" className="modal1_inputemail" style={{width:"250px"}}/>
 											<br/><br/>
-											<button onClick={this._login} type="submit" className="modal1_submit" style={{width:"250px",marginTop:"15px"}}>Submit</button>
+											<button onClick={this._login} type="button" className="modal1_submit" style={{width:"250px",marginTop:"15px"}}>Submit</button>
 									</form>
 								</div>
 
@@ -80,7 +103,7 @@ export default class Header extends Component{
 	}
 
 	render(){
-		if(this.state.submitState === false){
+		if(this.props.myregstate === false){
 			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
 												<div className="modal-header modal1_head" style={{border:"none",textAlign:"center"}}>
 													<button type="button" className="close close_btn" data-dismiss="modal">&times;</button>
@@ -88,14 +111,14 @@ export default class Header extends Component{
 												</div>
 												<div className="modal-body" style={{textAlign:"left",paddingLeft:"98px"}}>
 													<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
-													<input type="email" placeholder="Enter email id" className="modal1_inputemail"/><br/><br/>
-													<span className="modal-title modal1_head">Enter your Batch</span><br/><br/>
-													<input type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
-													<span className="modal-title modal1_head">Enter your Name</span><br/><br/>
-													<input type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
+													<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
+													<span className="modal-title modal1_head" >Enter your Batch</span><br/><br/>
+													<input id="regbatch" type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
+													<span className="modal-title modal1_head" >Enter your Name</span><br/><br/>
+													<input id="regname" type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
 												</div>
 												<div className="modal-footer modal1_bottom_container" style={{border:"none",textAlign:"center"}}>
-													<button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail}>Submit</button>
+													<button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button>
 												</div>
 											</div>
 		}
@@ -103,7 +126,7 @@ export default class Header extends Component{
 			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
 												<div className="modal-header modal1_head" style={{border:"none",textAlign:"center"}}>
 													<button type="button" className="close close_btn" data-dismiss="modal" onClick={this._regOpen}>&times;</button>
-													<img src="./images/sucess.png" style={{width:"80px",height:"80px",marginTop:"15px"}} />
+													<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524741632/bitmap.png" style={{width:"80px",height:"80px",marginTop:"15px"}} />
 												</div>
 												<div className="modal-body" style={{textAlign:"center",}}>
 													<div className=".modal1_thanks">
@@ -117,7 +140,7 @@ export default class Header extends Component{
 
 		return (
 				<div style={{width:"100%"}}>
-					<nav className="navbar navbar-inverse head_nav_style" style={{borderRadius:0,marginBottom:0}}>
+					<nav id="headnav" className="navbar navbar-inverse head_nav_style navtransparent" style={{borderRadius:0,marginBottom:0,opacity: 0.9}}>
 						<div className="container-fluid">
 							<div className="navbar-header">
 								<a className="navbar-brand" href="#"></a>
@@ -127,13 +150,30 @@ export default class Header extends Component{
 					</nav>
 
 					<div id="myModal" className="modal fade" role="dialog">
-						  <div className="modal-dialog">
+						<div className="modal-dialog">
 
 									{this.modalData}
 
-						  </div>
 						</div>
+					</div>
 				</div>
 			)
 	}
 }
+
+export function mapStateToProps(state){
+	return {
+		myregstate : state.RegisterState.isregisterd,
+		islogin : state.LoginState.islogin
+	}
+}
+
+export function mapDispatchProps(dispatch)
+{
+	return bindActionCreators({
+		loginUSer,
+		registerUSer
+	},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchProps)(Header)

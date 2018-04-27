@@ -21,7 +21,7 @@ export default class FAQ extends Component{
                     <p className="text">If you have already enrolled yourself into the KVK database, then you do not need to register. We have your details. Just enter the email address you gave at the time of enrolment and you will receive the login and password in your mailbox.</p>
 
                     <p>What do I do the first time I login to the site?</p>
-                    <p>When You login to the site the first time:</p>
+                    <p className="subtext">When You login to the site the first time:</p>
 
                     <ul>
                         <li><p className="text">Upload your profile photo (Put up a good one as others will see this photo of yours first when they browse through the profiles)</p></li>

@@ -7,7 +7,7 @@ import {AvatarAction} from './Actions/AvatarAction';
 import {InterestAction} from './Actions/InterestAction';
 import {ScheduleAction} from './Actions/ScheduleAction';
 const sagaMiddleware = createSagaMiddleware()
-let  store={};
+let store={};
 /*
    Redux-Store:Data Structure which stores application data 
 */
@@ -15,18 +15,18 @@ let  store={};
 if(process.env.NODE_ENV=="production")
 {
     //Avoiding  Devtools to run on Production
-       store=createStore(reducer,applyMiddleware(sagaMiddleware));
+       store=createStore(reducer);
        //Registering All Sagas to Store
-        sagaMiddleware.run(indexSaga);
+        //sagaMiddleware.run(indexSaga);
         store.dispatch({type:"ADD"})
 }
 else{
     // logger adds REDUX event logs to console
- store=createStore(reducer,applyMiddleware(logger,sagaMiddleware));
-        sagaMiddleware.run(indexSaga);
+    store=createStore(reducer,applyMiddleware(logger));
+        //sagaMiddleware.run(indexSaga);
         store.dispatch(AvatarAction());
-        store.dispatch(InterestAction())
-        store.dispatch(ScheduleAction())
+        //store.dispatch(InterestAction())
+        //store.dispatch(ScheduleAction())
 }
 
 export default store;

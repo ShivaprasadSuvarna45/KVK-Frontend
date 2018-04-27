@@ -19,7 +19,7 @@
     "url": "https://github.com/ShivaprasadSuvarna45/KVK-Frontend.git"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "cloudinary": "^1.11.0",
     "express": "^4.15.3",

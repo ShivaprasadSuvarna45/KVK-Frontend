@@ -57,11 +57,28 @@ body,html{
   z-index: 1000;
   left: 0;
   right: 0;
-  background: transparent;
   border: none;
 }
+.navtransparent{
+  background: transparent;
+}
 .head_font_color{
-  color: #0d25f5 !important;
+  font-weight: bold;
+  font-size: 17px;
+}
+.navwhite {
+  li {
+    a {
+      color:#fff !important;
+    }
+  } 
+}
+.navblack {
+  li {
+    a {
+      color:#000 !important;
+    }
+  } 
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
   background-color:transparent;
@@ -215,15 +232,17 @@ body,html{
   font-weight: bold;
 }
 .profile_Accom_dropDown{
-	width: 40%;
+	width: 96%;
   padding: 5px;
   border-radius: 4px;
   height: 40px;
+  margin-top: 12px;
 }
 .profile_amts{
 	margin-top: 10px;
 	margin-bottom: 15px;
-	border: 1px solid;
+  border: 1px solid;
+  width: 70%;
 }
 .profile_update_btn{
 	width: 30%;
@@ -234,9 +253,48 @@ body,html{
   color: #fff;
   letter-spacing: 3px;
 }
+.profile_album_btn{
+  width: 10%;
+  height: 35px;
+  background-color: #4a4a4a;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.profile_loading{
+  width: 100%;
+  position: absolute;
+  background-color: gray;
+  opacity: 0.5;
+  height: 1850px;
+  z-index: 10000;
+  padding-left: 45%;
+  padding-top: 27%; 
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .gallery_search_design{
   margin-left: 5%;
-  width: 30%;
+  width: 20%;
   border-radius: 2px;
   border: 1px solid;
   padding: 6px;
