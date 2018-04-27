@@ -72,7 +72,7 @@ class Header extends Component{
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
 					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
-					<li><Link className="head_font_color" to="/Gallery">GALLERY</Link></li>
+					<li><Link className="head_font_color" to="/Gallery">Gallery</Link></li>
 					<li><Link className="head_font_color" to="/Profile">My Profile</Link></li>
 					<li onClick={this._logout}><Link className="head_font_color" to="/">Logout</Link></li>
 				</ul>
@@ -80,13 +80,13 @@ class Header extends Component{
 		}
 		else{
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"132px"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><a className="head_font_color" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Register</a></li>
 					<li className="dropdown removpos">
 							<a className="dropdown-toggle head_font_color" data-toggle="dropdown" href="#">Login
 							<span className="caret"></span></a>
-							<div className="dropdown-menu dropdwn_setting">
+							<div className="dropdown-menu dropdwn_setting" style={{marginTop:"-78px",marginRight:"23px"}}>
 
 									<form>
 											<p>Email</p>
@@ -145,7 +145,9 @@ class Header extends Component{
 					<nav id="headnav" className="navbar navbar-inverse head_nav_style navtransparent" style={{borderRadius:0,marginBottom:0,opacity: 0.9}}>
 						<div className="container-fluid">
 							<div className="navbar-header">
-								<a className="navbar-brand" href="#"></a>
+								<div className="navbar-brand" style={{paddingLeft:"21%"}} >
+									<img style={{width:"150px",height:"110px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524839886/Logo.jpg" />
+								</div>
 							</div>
 							{this._renderLogin()}
 						</div>

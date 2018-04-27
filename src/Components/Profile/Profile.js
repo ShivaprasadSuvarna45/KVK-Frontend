@@ -205,7 +205,7 @@ class Profile extends Component{
               </div>
 
                 <div className="row" style={{paddingLeft:"8%"}}>
-                    <button id="btmAlbum" className="profile_album_btn" type="button" onClick={this._triggerAlbum}>Add Photo</button><span style={{paddingLeft:"6px"}}>Photo size less than 9MB  (Click on Update button to save images)</span>
+                    <button id="btmAlbum" className="profile_album_btn" type="button" onClick={this._triggerAlbum}>Add your memories</button><span style={{paddingLeft:"6px"}}>Photo size less than 9MB  (Click on Update button to save images)</span>
                     <input id="album_id" type="file" style={{visibility:"hidden"}} onChange={this.previewAlbumImage.bind(this)} />
                     {renderALbum}
                 </div>
@@ -235,7 +235,7 @@ class Profile extends Component{
                 <div className="col-sm-4 col-lg-4">
                     <span>T-Shirt Size</span><br/>
                     <input id="updtshirt" className="profile_arrival" type="text" /><br/>
-                    <span>Number of accompanying family members (excluding you)</span><br/>
+                    <span>Your current profession</span><br/>
                     <input id="updFamily" className="profile_arrival" type="text" /><br/>
                 </div>
             </div>

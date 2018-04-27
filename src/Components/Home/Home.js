@@ -235,6 +235,35 @@ export default class Home extends Component{
         <div className="home_want_to_see">
           <Link className="home_want_to_see" to={{ pathname: "/Gallery", state: { gotToSearch: true} }}>Want to see who is coming....?</Link>
         </div>
+        <div className="home_prg_divv">
+          <p className="home_prg_pp">PROGRAM</p>
+          <table id="home_prg_tbl">
+            <tr>
+              <td className="home_tbl_dtls">8:30 AM to 10:30 AM</td>
+              <td className="home_tbl_dtls">Arrivals and Registrations</td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls">10:30 AM to 12.30 PM</td>
+              <td className="home_tbl_dtls">Gather in the banquet hall</td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls">12:30 onwards till 6 PM</td>
+              <td className="home_tbl_dtls">Formal Group photos of each batch</td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls">12:30 PM to 2:30 PM</td>
+              <td className="home_tbl_dtls">Relaxed Lunch with friends, teachers</td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls">2:30 PM to 4 PM</td>
+              <td className="home_tbl_dtls">Cultural activities and competitions</td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls">4PM to 6 PM</td>
+              <td className="home_tbl_dtls">Sports Activities and competitions</td>
+            </tr>
+          </table>
+        </div>
       </div>
     )
 	}

@@ -48,52 +48,61 @@ class Gallery extends Component{
             <div style={{width:"100%"}}>
                 <Header/>
                     <div className="container" style={{paddingTop:"6%",paddingBottom:"3%"}}>
-                        <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1992</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1993</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                            <p className="subtext">1994</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1995</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
                     </div>
                     <div className="container" style={{paddingBottom:"3%"}}>
-                        <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1996</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1997</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                            <p className="subtext">1998</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">1999</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
                     </div>
                     <div className="container" style={{paddingBottom:"3%"}} >
-                        <p className="subtext">Batch 1990 - 2000</p>
                         <div className="row">
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2000</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2010</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                            <p className="subtext">2012</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
-                            <div className="col-sm-3 col-lg-3">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2015</p>
                                 <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683650/KVK_grp.jpg" style={{width:"100%"}} />
                             </div>
                         </div>
@@ -109,7 +118,7 @@ class Gallery extends Component{
                             <option value="notAttending">Not Attending</option>
                             <option value="notDecided">Not Decided</option>
                         </select>
-                        <button className="profile_album_btn" style={{marginLeft:"6%"}} onClick={this.searchResult.bind(this)} type="button">Search</button>
+                        <button className="profile_album_btn" style={{marginLeft:"6%",width:"10%"}} onClick={this.searchResult.bind(this)} type="button">Search</button>
                     </div>
                     <div className="container" style={{paddingBottom:"2%",paddingLeft:"6%"}}>
                         <div className="row">
