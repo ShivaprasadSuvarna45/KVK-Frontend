@@ -145,7 +145,7 @@ class Header extends Component{
 					<nav id="headnav" className="navbar navbar-inverse head_nav_style navtransparent" style={{borderRadius:0,marginBottom:0,opacity: 0.9}}>
 						<div className="container-fluid">
 							<div className="navbar-header">
-								<div className="navbar-brand" style={{paddingLeft:"21%"}} >
+								<div className="navbar-brand home_padLogo">
 									<img style={{width:"150px",height:"110px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524839886/Logo.jpg" />
 								</div>
 							</div>

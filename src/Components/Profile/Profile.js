@@ -167,10 +167,10 @@ class Profile extends Component{
       <div style={{width:"100%"}}>
           <Header/>
           {this.load}
-          <div className="container-fluid" style={{paddingLeft:"10%",paddingTop:"5%"}}>
+          <div className="container-fluid profile_container">
 
-              <span style={{paddingLeft:"7.5%",paddingTop:"3%",fontSize:"25px"}}>My Profile</span>
-              <button type="button" className="modal1_submit" style={{width:"250px",marginLeft:"30%"}} data-toggle="modal" data-target="#changePasswordModal" data-backdrop="static" data-keyboard="false">Change Password</button>
+              <span className="myprofileheading">My Profile</span>
+              <button type="button" className="modal1_submit chng_pwd_btn" data-toggle="modal" data-target="#changePasswordModal" data-backdrop="static" data-keyboard="false">Change Password</button>
                     <div id="changePasswordModal" className="modal fade" role="dialog">
 						<div className="modal-dialog">
                             <div className="modal-content" style={{marginTop:"30px"}}>
@@ -211,7 +211,7 @@ class Profile extends Component{
                 </div>
           </div>
 
-          <div style={{padding:"100px",paddingLeft:"16%",paddingTop:"10px"}}>
+          <div className="journey_head">
             <p className="profile_desc">Journey Since Graduation</p><br/>
             <p className="profile_desc">Describe your life after KREC - what you have been doing professionally and personally in the subsequent 25 years. This will go into the E-book that will be given to each alumni. Feel free to elaborate, it works best if it is limited to about half a page (A4) or less.</p>
             <br/>

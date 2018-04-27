@@ -11,7 +11,7 @@ export default class FAQ extends Component{
         return(
             <div style={{width:"100%"}}>
                 <Header/>
-                <div className="container" style={{paddingTop:"6%",paddingBottom:"2%"}}>
+                <div className="container padAbt">
                     <p className="subtext">What is this website about?</p>
                     <p className="text">This is the website for the Chota School Bada Reunion - of the alumni of Kendriya Vidyalaya Kudremukh from 1978 to 2015.</p>
 

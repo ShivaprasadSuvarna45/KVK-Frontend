@@ -21,7 +21,7 @@ export default class Footer extends Component{
 									<span className="footer_desc">KVK.info@.com</span>
 							  </div>
 							</div>
-							<div className="col-sm-7 col-lg-7" style={{paddingLeft:"10%"}}>
+							<div className="col-sm-7 col-lg-7 visit_fb">
 									<p className="footer_head">VISIT KVK PAGE ON FACEBOOK</p>
 									<i className="fab fa-facebook-square footer_fbIcon"></i>
 							</div>

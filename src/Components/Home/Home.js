@@ -90,25 +90,25 @@ export default class Home extends Component{
               </div>
               <div className="col-xs-5 col-sm-5">
                   <div className="row">
-                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span className="home_countdown_letter">365</span>
                           </div>
                           <span className="home_days">DAYS</span>
                       </div>
-                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span className="home_countdown_letter">13</span>
                           </div>
                           <span className="home_days">HOURS</span>
                           </div>
-                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span className="home_countdown_letter">48</span>
                           </div>
                           <span className="home_days">MINUTES</span>
                       </div>
-                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span className="home_countdown_letter">45</span>
                           </div>

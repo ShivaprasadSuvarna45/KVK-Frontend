@@ -11,7 +11,7 @@ export default class About extends Component{
 		return (
       <div style={{width:"100%"}}>
       <Header/>
-      <div className="container" style={{paddingTop:"6%",paddingBottom:"2%"}}>
+      <div className="container padAbt">
 
         <p className="text-about">About</p>
 

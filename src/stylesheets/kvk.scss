@@ -81,9 +81,7 @@ body,html{
     }
   } 
 }
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-  background-color:transparent;
-}
+
 .home_countdown_block{
 	background-color: #979036;
 	border-radius: 5px;
@@ -150,6 +148,9 @@ body,html{
   font-size: 18px;
   font-weight: 700;
   border: 1px solid #fff;
+}
+.home_padLogo{
+  padding-left: 21%;
 }
 .footer_head{
 	color: #f8e71c;
@@ -373,4 +374,71 @@ th,td{
 	font-size: 40px;
   margin-right: 13px;
   margin-top: -16px;
+}
+.profile_container{
+  padding-left: 10%;
+  padding-top:10%; 
+}
+.myprofileheading{
+  padding-left: 7.5%;
+  padding-top: 3%;
+  font-size: 25px;
+}
+.chng_pwd_btn{
+  width: 250px;
+  margin-left: 30%;
+}
+.journey_head{
+  padding: 10px 100px 100px 16%;
+}
+.visit_fb{
+  padding-left: 10%;
+}
+.padAbt{
+  padding-top: 12%;
+  padding-bottom: 2%
+}
+@media only screen and (max-width: 600px) {
+  .home_padLogo{
+    padding-left: 3%;
+  }
+  .profile_container{
+    padding-left: 0;
+    padding-top: 50%;
+  }
+  .myprofileheading{
+    padding-left: 2.5%;
+    padding-top: 3%;
+    font-size: 25px;
+  }
+  .chng_pwd_btn{
+    width: 170px;
+    margin-left: 14%;
+  }
+  .profile_inputs{
+    width :80%;
+    margin-left : 12%
+  }
+  .profile_album_btn{
+    width: 89%;
+    margin-left: 3%;
+  }
+  .journey_head{
+    padding: 0px 3% 0px 3%;
+  }
+  .profile_desc,.profile_textarea,.profile_Accom_dropDown,.profile_arrival{
+    width: 100%;
+  }
+  .profile_update_btn{
+    width: 70%;
+    margin-bottom: 3%;
+  }
+  .visit_fb{
+    padding-left: 20%;
+    padding-top: 10%;
+  }
+  .padAbt{
+    padding-top: 45%;
+    padding-bottom: 2%
+  }
 }
