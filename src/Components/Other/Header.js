@@ -17,7 +17,7 @@ class Header extends Component{
 		this._regOpen = this._regOpen.bind(this);
 		
 		this.state = {
-			login:false,
+			islogin:false,
 			regDeails : {
 				email: '',
 				batch: '',
@@ -53,18 +53,20 @@ class Header extends Component{
 		console.log("Hi");
 	}
 	_logout(){
+		this.setState({islogin:false});
 		store.dispatch({type:"LOGOUT_USER"});
 	}
 
 	_login(){
 		let loginCred = {};		
+		this.setState({islogin:true});
 		loginCred.email = document.getElementById("loginemail").value.trim();
 		loginCred.password = document.getElementById("loginpassword").value.trim();
-		API_UTIL.loginUser(loginCred);
+		//API_UTIL.loginUser(loginCred);
 	}
 
 	_renderLogin(){
-		if(this.props.islogin){
+		if(this.state.islogin){
 			return(
 				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
