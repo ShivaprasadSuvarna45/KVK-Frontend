@@ -47,7 +47,26 @@ class Gallery extends Component{
         return(
             <div style={{width:"100%"}}>
                 <Header/>
-                    <div className="container" style={{paddingTop:"6%",paddingBottom:"3%"}}>
+
+                    <div id="searchdiv" style={{paddingLeft:"6%",paddingTop:"15%",paddingBottom:"2%"}}>
+                        <p className="subtext"> Search Friends : </p>
+                        <input id="srchBatch" className="gallery_search_design" type="text" placeholder="By Batch"/>
+                        <input id="srchUser" className="gallery_search_design" type="text" placeholder="By Name"/>
+                        
+                        <select id="srchAttendr" className="gallery_search_design">
+                            <option value=""></option>
+                            <option value="attending">Attending</option>
+                            <option value="notAttending">Not Attending</option>
+                            <option value="notDecided">Not Decided</option>
+                        </select>
+                        <button className="profile_album_btn" style={{marginLeft:"6%",width:"10%"}} onClick={this.searchResult.bind(this)} type="button">Search</button>
+                    </div>
+                    <div className="container" style={{paddingBottom:"2%",paddingLeft:"6%"}}>
+                        <div className="row">
+                            {renderImages}
+                        </div>
+                    </div>
+                    <div className="container" style={{paddingTop:"3%",paddingBottom:"3%"}}>
                         <div className="row">
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1992</p>
@@ -107,24 +126,7 @@ class Gallery extends Component{
                             </div>
                         </div>
                     </div>
-                    <div id="searchdiv" style={{paddingLeft:"6%",paddingBottom:"2%"}}>
-                        <p className="subtext"> Search Friends : </p>
-                        <input id="srchBatch" className="gallery_search_design" type="text" placeholder="By Batch"/>
-                        <input id="srchUser" className="gallery_search_design" type="text" placeholder="By Name"/>
-                        
-                        <select id="srchAttendr" className="gallery_search_design">
-                            <option value=""></option>
-                            <option value="attending">Attending</option>
-                            <option value="notAttending">Not Attending</option>
-                            <option value="notDecided">Not Decided</option>
-                        </select>
-                        <button className="profile_album_btn" style={{marginLeft:"6%",width:"10%"}} onClick={this.searchResult.bind(this)} type="button">Search</button>
-                    </div>
-                    <div className="container" style={{paddingBottom:"2%",paddingLeft:"6%"}}>
-                        <div className="row">
-                            {renderImages}
-                        </div>
-                    </div>
+
                 <Footer/>
             </div>
         )

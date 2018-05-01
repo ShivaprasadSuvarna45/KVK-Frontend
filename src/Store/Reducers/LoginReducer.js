@@ -8,7 +8,7 @@ export function LoginReducer(state={userDetails: {},islogin:false},action){
              }
              else if(action.payload.msg === "failure"){
                 console.log(action.payload.error);
-                alert("Invalid Login details");
+                alert("Connection error, Please try again");
                 return {...state,userDetails:{},islogin:false}
              }
             break;
@@ -31,8 +31,8 @@ export function LoginReducer(state={userDetails: {},islogin:false},action){
          }
 
         case "UPDATED" :{
-            alert("Profile updated successfully")
-            return { ...state};
+            alert(payload.msg)
+            return {...state,userDetails:action.payload.res.data,islogin:true}
         }
     }
     return state;

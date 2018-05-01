@@ -16,6 +16,10 @@ export function RegisterReducer(state={isregisterd: false},
                 }
                 
          }
+         case "CHANGE_REG_STATE" :
+         {
+            return {...state,isregisterd:false}   
+         }
     }
     return state;
 }

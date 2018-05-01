@@ -23,7 +23,13 @@ class Api{
       loginUser(data){
             axios.get(KVKURL+'/login?mail='+data.email+"&password="+data.password)
             .then(function(res){
-                  store.dispatch({type:"LOGIN_USER",payload:{res:res,msg:"success"}});
+                  if(res.data === "Invalid Login Details"){
+                        alert("Invalid Login Details")
+                  }
+                  else{
+                        store.dispatch({type:"LOGIN_USER",payload:{res:res,msg:"success"}});
+                  }
+                  
             })
             .catch(function(error){
                   store.dispatch({type:"LOGIN_USER",payload:{msg:"failure",error:error}});
@@ -48,10 +54,10 @@ class Api{
                   "data":data
             })
             .then(function(res){
-                  store.dispatch({type:"UPDATED",payload:res});
+                  store.dispatch({type:"UPDATED",payload:{msg:"Values updated sucessfully",res:res}});
             })
             .catch(function(error){
-                  store.dispatch({type:"UPDATED",payload:error});
+                 // store.dispatch({type:"UPDATED",payload:error});
             })
       }
       getSerachResults(data){
@@ -63,6 +69,22 @@ class Api{
                   }
                   console.log(img_links);
                   store.dispatch({type:"SEARCH_RESULT",payload:img_links});
+            })
+            .catch(function(error){
+                  store.dispatch({type:"SEARCH_NOT_FOUND",payload:"no seach results"});
+            })
+      }
+      getAllRecords(data){
+            let albm_pf = [];
+            axios.get(KVKURL+'/getalldetails')
+            .then(function(res){
+                  for(let i=0;i<res.data.length; i++){
+                        for(let j=0; j< res.data[i].album_imgs.length; j++){
+                              albm_pf.push({profile_photo:res.data[i].profile_photo,album_img:res.data[i].album_imgs[j]});
+                        }
+                  }
+                  console.log(albm_pf);
+                  store.dispatch({type:"SET_SLICK",payload:albm_pf});
             })
             .catch(function(error){
                   store.dispatch({type:"SEARCH_NOT_FOUND",payload:"no seach results"});

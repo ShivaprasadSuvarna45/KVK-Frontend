@@ -2,9 +2,14 @@ import React,{ Component } from 'react';
 import Footer from '../Other/Footer';
 import Header from '../Other/Header';
 import Slider from "react-slick";
+import API_UTIL from "../../API/Api";
+import store from "../../Store/store";
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
 import {BrowserRouter as Router , Link ,Route } from 'react-router-dom'
 
-export default class Home extends Component{
+class Home extends Component{
 
 	constructor(props){
     super(props);
@@ -14,9 +19,25 @@ export default class Home extends Component{
 	}
 
 	componentDidMount(){
+    API_UTIL.getAllRecords();
 	}
 
 	render(){
+
+    this.render_slick = <div></div>
+    if(this.props.album_profile.length > 3){
+          this.render_slick = this.props.album_profile.map((ele,index) => {
+            return(              
+                    <div style={{position:"relative"}}>
+                        <div style={{width:"250px",height:"250px",position:"relative"}}>
+                          <img style={{width:"100%",height:"100%",borderRadius:"5px"}} src={ele.album_img}/>
+                          <img src={ele.profile_photo} style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
+                        </div>
+                    </div>
+            )
+          });
+    }
+    
 		var settings = {
 			lazyLoad: 'ondemand',
 		  slidesToShow: 3,
@@ -25,6 +46,7 @@ export default class Home extends Component{
   		autoplaySpeed: 1500,
 			arrows:false
     };
+
 		return (
       <div style={{width:"100%"}}>
 
@@ -81,7 +103,7 @@ export default class Home extends Component{
         </div>
 
         <div className="container-fluid">
-            <div className="row" style={{backgroundColor:"#4a4a4a",paddingTop:"15px",paddingBottom:"13px"}}>
+            <div className="row" style={{backgroundColor:"#00a756",paddingTop:"15px",paddingBottom:"13px"}}>
               <div className="col-xs-7 col-sm-7" style={{textAlign:"center"}}>
                   <div>
                     <span className="rewindFont">Rewind Reunite Relive</span><br/>
@@ -135,7 +157,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>1978-1985</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"50%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"50%",background:"#00a756"}}>
 											    <span className="sr-only">50</span>
 											  </div>
 											</div>
@@ -144,7 +166,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>1986-1995</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"75%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"75%",background:"#00a756"}}>
 											    <span className="sr-only">75</span>
 											  </div>
 											</div>
@@ -153,7 +175,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>1996-2000</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -162,7 +184,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>2001-2005</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -171,7 +193,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>2006-2010</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -180,7 +202,7 @@ export default class Home extends Component{
                       <span style={{float:"right"}}>2011-2015</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -190,48 +212,12 @@ export default class Home extends Component{
                 <div className="col-sm-1 col-lg-1"></div>
             </div>
         </div>
-
         <div style={{marginLeft:"7%",maginBottom:"2%"}}>
-					<Slider {...settings}>
-					  <div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249661/KVK/chethan1.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
-						<div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249666/KVK/chethan2.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
-						<div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249681/KVK/chethan3.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
-						<div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249690/KVK/chethan4.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
-						<div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249694/KVK/chethan5.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
-						<div style={{position:"relative"}}>
-								<div style={{width:"250px",height:"250px",position:"relative"}}>
-									<img style={{width:"100%",height:"100%",borderRadius:"5px"}} src="https://res.cloudinary.com/dldgtfchi/image/upload/v1524249714/KVK/chethan6.jpg"/>
-									<img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524249652/KVK/chethan_profile.jpg" style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
-								</div>
-						</div>
+                  <Slider {...settings}>
+                      {this.render_slick}
+                  </Slider>
+          </div>
 
-					</Slider>
-				</div>
         <div className="home_want_to_see">
           <Link className="home_want_to_see" to={{ pathname: "/Gallery", state: { gotToSearch: true} }}>Want to see who is coming....?</Link>
         </div>
@@ -240,27 +226,30 @@ export default class Home extends Component{
           <table id="home_prg_tbl">
             <tr>
               <td className="home_tbl_dtls">8:30 AM to 10:30 AM</td>
-              <td className="home_tbl_dtls">Arrivals and Registrations</td>
+              <td className="home_tbl_dtls">Arrivals and Registrations – Collect your badges, goodie bags, coupons. Meet & Greet / Hugs & Kisses with old pals you can recall and …those you cannot recall (but they can!).   Dig into Breakfast or just have coffee or tea
+              Take Selfies/Groufies wherever you like or specially at the photo stations.</td>
             </tr>
             <tr>
               <td className="home_tbl_dtls">10:30 AM to 12.30 PM</td>
-              <td className="home_tbl_dtls">Gather in the banquet hall</td>
+              <td className="home_tbl_dtls">Gather in the banquet hall, The formal ceremony starts with Lighting of the lamp and Invocation to the Almighty, Some of our teachers and alumni share a few words.  Felicitation of teachers present for the occasion.</td>
             </tr>
             <tr>
               <td className="home_tbl_dtls">12:30 onwards till 6 PM</td>
-              <td className="home_tbl_dtls">Formal Group photos of each batch</td>
+              <td className="home_tbl_dtls">Formal Group photos of each batch begins and will continue through till 6 PM while the rest of events continue in parallel. </td>
             </tr>
             <tr>
               <td className="home_tbl_dtls">12:30 PM to 2:30 PM</td>
-              <td className="home_tbl_dtls">Relaxed Lunch with friends, teachers</td>
+              <td className="home_tbl_dtls">Relaxed Lunch with friends, teachers – New conversations, Peals of laughter on old times and new. Walk around and forge new ties – personal and professional. More pictures, More Selfies, More Memories to take back for life</td>
             </tr>
             <tr>
               <td className="home_tbl_dtls">2:30 PM to 4 PM</td>
-              <td className="home_tbl_dtls">Cultural activities and competitions</td>
+              <td className="home_tbl_dtls">Cultural activities and competitions. Bring on the competitive spirit of the Houses at school for the CCA activities. Be like then. Entertain and be Entertained!
+              Batch-wise Group photos continue at the Group Photo booth.</td>
             </tr>
             <tr>
               <td className="home_tbl_dtls">4PM to 6 PM</td>
-              <td className="home_tbl_dtls">Sports Activities and competitions</td>
+              <td className="home_tbl_dtls">Sports Activities and competitions. As the August sun goes down – time for some outdoors. 
+              Gents - Put on the Sacks to race and Ladies - keep the lemon on the spoon and plenty more. Theme based Professional meet-up tracks on the Sidelines – meet and network with alumni around various themes/tracks. </td>
             </tr>
           </table>
         </div>
@@ -268,3 +257,17 @@ export default class Home extends Component{
     )
 	}
 }
+export function mapStateToProps(state){
+	return {
+		album_profile : state.SearchState.album_profile
+	}
+}
+
+export function mapDispatchProps(dispatch)
+{
+	return bindActionCreators({
+	
+	},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchProps)(Home)

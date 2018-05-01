@@ -9,7 +9,7 @@ export default class Footer extends Component{
 
 	render(){
 		return (
-			<div style={{backgroundColor:"#4a4a4a"}} className="container-fluid">
+			<div style={{backgroundColor:"#00a756"}} className="container-fluid">
 					<div className="row" style={{padding:"30px"}}>
 							<div className="col-sm-5 col-lg-5" style={{paddingLeft:"20%"}}>
 								<div style={{textAlign:"left"}}>

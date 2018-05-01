@@ -6,6 +6,7 @@ import {registerUSer} from "../../Store/Actions/RegisterAction";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import API_UTIL from "../../API/Api";
+import {event} from '../Utility/Events';
 
 class Header extends Component{
 	constructor(props){
@@ -15,7 +16,7 @@ class Header extends Component{
 		this._logout = this._logout.bind(this);
 		this._login = this._login.bind(this);
 		this._regOpen = this._regOpen.bind(this);
-		
+		this.changeRegisterState = this.changeRegisterState.bind(this);
 		this.state = {
 			islogin:false,
 			regDeails : {
@@ -31,15 +32,14 @@ class Header extends Component{
 		document.addEventListener('scroll', () => {
 			if (window.scrollY < 100) {
 				$("#headnav").addClass("navtransparent");
-				$("#newid").addClass("navblack");
-				$("#newid").removeClass("navwhite");
+				$(".navbar-inverse").css("background","transparent");
 			}
 			else{
 				$("#headnav").removeClass("navtransparent");
-				$("#newid").addClass("navwhite");
-				$("#newid").removeClass("navblack");
+				$(".navbar-inverse").css("background","#fff");
 			}
 		  });
+
 	}
 
 	_submitmail(){
@@ -52,23 +52,27 @@ class Header extends Component{
 	_regOpen(){
 		console.log("Hi");
 	}
+	changeRegisterState(){
+		store.dispatch("CHANGE_REG_STATE");
+	}
 	_logout(){
-		this.setState({islogin:false});
+		//this.setState({islogin:false});
 		store.dispatch({type:"LOGOUT_USER"});
 	}
 
 	_login(){
 		let loginCred = {};		
-		this.setState({islogin:true});
+		//this.setState({islogin:true});
 		loginCred.email = document.getElementById("loginemail").value.trim();
 		loginCred.password = document.getElementById("loginpassword").value.trim();
-		//API_UTIL.loginUser(loginCred);
+		API_UTIL.loginUser(loginCred);
+		event.emit('loggedin');
 	}
 
 	_renderLogin(){
-		if(this.state.islogin){
+		if(this.props.islogin){
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",height:"116px",}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
 					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
@@ -80,13 +84,13 @@ class Header extends Component{
 		}
 		else{
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"132px"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"116px",paddingTop:"27px"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><a className="head_font_color" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Register</a></li>
 					<li className="dropdown removpos">
 							<a className="dropdown-toggle head_font_color" data-toggle="dropdown" href="#">Login
 							<span className="caret"></span></a>
-							<div className="dropdown-menu dropdwn_setting" style={{marginTop:"-78px",marginRight:"23px"}}>
+							<div className="dropdown-menu dropdwn_setting" style={{marginTop:"-30px",marginRight:"23px"}}>
 
 									<form>
 											<p>Email</p>
@@ -108,7 +112,7 @@ class Header extends Component{
 		if(this.props.myregstate === false){
 			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
 												<div className="modal-header modal1_head" style={{border:"none",textAlign:"center"}}>
-													<button type="button" className="close close_btn" data-dismiss="modal">&times;</button>
+													<button type="button" className="close close_btn" data-dismiss="modal" onClick={this.changeRegisterState.bind(this)}>&times;</button>
 
 												</div>
 												<div className="modal-body" style={{textAlign:"left",paddingLeft:"98px"}}>
@@ -146,7 +150,7 @@ class Header extends Component{
 						<div className="container-fluid">
 							<div className="navbar-header">
 								<div className="navbar-brand home_padLogo">
-									<img style={{width:"150px",height:"110px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524839886/Logo.jpg" />
+									<img style={{width:"125px",height:"99px",marginTop:"-7px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1525168221/bitmap_3x.png" />
 								</div>
 							</div>
 							{this._renderLogin()}
