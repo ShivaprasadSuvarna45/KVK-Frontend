@@ -27,7 +27,7 @@ export function LoginReducer(state={userDetails: {},islogin:false},action){
                 alert("Password Not Updated");
                 return {...state};
             }
-             
+            break;
          }
 
         case "UPDATED" :{
