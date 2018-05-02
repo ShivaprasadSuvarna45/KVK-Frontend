@@ -54,9 +54,17 @@ class Api{
                   "data":data
             })
             .then(function(res){
-                  store.dispatch({type:"UPDATED",payload:{msg:"Values updated sucessfully",res:res}});
+                  if(res.data === "Values not updated"){
+                        alert("Vlaues not updated. Please try again later")
+                  }
+                  else{
+                        store.dispatch({type:"UPDATED",payload:{msg:"Values updated sucessfully",res:res}});
+                  }
+                  
             })
             .catch(function(error){
+                  alert("Connection Error");
+                  console.log(error);
                  // store.dispatch({type:"UPDATED",payload:error});
             })
       }

@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import API_UTIL from "../../API/Api";
 import {loginUSer} from "../../Store/Actions/LoginAction";
 import store from "../../Store/store";
-import {event} from '../Utility/Events';
 
 class Profile extends Component{
 
@@ -145,44 +144,74 @@ class Profile extends Component{
         
     }
     setAllValues(){
-        this.setState({default_src:this.props.userDetails.profile_photo});
-        this.setState({album_imgs:this.props.userDetails.album_imgs});
-        document.getElementById("updname").value = this.props.userDetails.username;
-        document.getElementById("updbranch").value = this.props.userDetails.batch;
-        document.getElementById("updcity").value = this.props.userDetails.city;
-        document.getElementById("updcountry").value = this.props.userDetails.country;
-
+        if(this.props.userDetails.profile_photo){
+            this.setState({default_src:this.props.userDetails.profile_photo});
+        }
+        if(this.props.userDetails.album_imgs){
+            this.setState({album_imgs:this.props.userDetails.album_imgs});
+        }
+        if(this.props.userDetails.username){
+            document.getElementById("updname").value = this.props.userDetails.username;
+        }
+        if(this.props.userDetails.batch){
+            document.getElementById("updbranch").value = this.props.userDetails.batch;
+        }
+        if(this.props.userDetails.city){
+            document.getElementById("updcity").value = this.props.userDetails.city;
+        }
+        if(this.props.userDetails.country){
+            document.getElementById("updcountry").value = this.props.userDetails.country;
+        }
+        if(this.props.userDetails.description){
+            document.getElementById("upddesc").value = this.props.userDetails.description;
+        }
+        if(this.props.userDetails.attend_event){
+            $('input[name="group1"][value="' + this.props.userDetails.attend_event + '"]').prop('checked', true);
+        }
         
-
-        document.getElementById("upddesc").value = this.props.userDetails.description;
-
-        $('input[name="group1"][value="' + this.props.userDetails.attend_event + '"]').prop('checked', true);
-
-        var e = document.getElementById("updmeal");
-        e.options[e.selectedIndex].text = this.props.userDetails.meal_preference;
-        document.getElementById("updspouse").value = this.props.userDetails.spouse;
-        document.getElementById("updtshirt").value = this.props.userDetails.t_shirt_size;
-        document.getElementById("updFamily").value = this.props.userDetails.family_members;      
-        document.getElementById("updconamt").value = this.props.userDetails.contribution_amount;      
-        document.getElementById("updpaidvia").value = this.props.userDetails.paid_via;      
-        document.getElementById("updconfmcode").value = this.props.userDetails.confirmation_code;      
-        document.getElementById("updpaydate").value = this.props.userDetails.payment_date;  
+        if(this.props.userDetails.meal_preference){
+            var e = document.getElementById("updmeal");
+            e.options[e.selectedIndex].text = this.props.userDetails.meal_preference;
+        }
+        if(this.props.userDetails.spouse){
+            document.getElementById("updspouse").value = this.props.userDetails.spouse;
+        }
+        if(this.props.userDetails.t_shirt_size){
+            document.getElementById("updtshirt").value = this.props.userDetails.t_shirt_size;   
+        }
+        if(this.props.userDetails.family_members){
+            document.getElementById("updFamily").value = this.props.userDetails.family_members;
+        }
+        if(this.props.userDetails.contribution_amount){
+            document.getElementById("updconamt").value = this.props.userDetails.contribution_amount; 
+        }
+        if(this.props.userDetails.paid_via){
+            document.getElementById("updpaidvia").value = this.props.userDetails.paid_via;
+        }
+        if(this.props.userDetails.confirmation_code){
+            document.getElementById("updconfmcode").value = this.props.userDetails.confirmation_code;
+        }
+        if(this.props.userDetails.payment_date){
+            document.getElementById("updpaydate").value = this.props.userDetails.payment_date; 
+        }
     }
 
     render(){
 
-        console.log(this.state.album_imgs);
+        console.log("Hi    " +this.state.album_imgs);
         var renderALbum = <div></div>
-        if(this.state.album_imgs.length > 0){
-            renderALbum = this.state.album_imgs.map((image,index) => {
-                return(
-                    <div className="col-sm-4 col-lg-4" style={{width:"20%"}} >
-                        <img src={image} style={{width:"100%",height:"120px"}} />
-                    </div>
-                )
-            });
-            
-        }
+        if(this.state.album_imgs){
+            if(this.state.album_imgs.length > 0){
+                renderALbum = this.state.album_imgs.map((image,index) => {
+                    return(
+                        <div className="col-sm-4 col-lg-4" style={{width:"20%"}} >
+                            <img src={image} style={{width:"100%",height:"120px"}} />
+                        </div>
+                    )
+                });
+                
+            }
+        }       
 
 
         if(this.state.loading){

@@ -2,11 +2,10 @@ import React,{Component} from 'react';
 import {BrowserRouter as Router , Link ,Route } from 'react-router-dom'
 import store from "../../Store/store";
 import {loginUSer} from "../../Store/Actions/LoginAction";
-import {registerUSer} from "../../Store/Actions/RegisterAction";
+import {registerUSer,changeRegState} from "../../Store/Actions/RegisterAction";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import API_UTIL from "../../API/Api";
-import {event} from '../Utility/Events';
 
 class Header extends Component{
 	constructor(props){
@@ -32,11 +31,11 @@ class Header extends Component{
 		document.addEventListener('scroll', () => {
 			if (window.scrollY < 100) {
 				$("#headnav").addClass("navtransparent");
-				$(".navbar-inverse").css("background","transparent");
+				//$(".navbar-inverse").css("background","transparent");
 			}
 			else{
 				$("#headnav").removeClass("navtransparent");
-				$(".navbar-inverse").css("background","#fff");
+				//$(".navbar-inverse").css("background","#fff");
 			}
 		  });
 
@@ -53,7 +52,7 @@ class Header extends Component{
 		console.log("Hi");
 	}
 	changeRegisterState(){
-		store.dispatch("CHANGE_REG_STATE");
+		store.dispatch({type:"CHANGE_REG_STATE"});
 	}
 	_logout(){
 		//this.setState({islogin:false});
@@ -66,13 +65,12 @@ class Header extends Component{
 		loginCred.email = document.getElementById("loginemail").value.trim();
 		loginCred.password = document.getElementById("loginpassword").value.trim();
 		API_UTIL.loginUser(loginCred);
-		event.emit('loggedin');
 	}
 
 	_renderLogin(){
 		if(this.props.islogin){
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",height:"116px",}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",height:"105px",}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
 					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
@@ -84,7 +82,7 @@ class Header extends Component{
 		}
 		else{
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"116px",paddingTop:"27px"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"105px",paddingTop:"27px"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><a className="head_font_color" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Register</a></li>
 					<li className="dropdown removpos">
@@ -150,7 +148,7 @@ class Header extends Component{
 						<div className="container-fluid">
 							<div className="navbar-header">
 								<div className="navbar-brand home_padLogo">
-									<img style={{width:"125px",height:"99px",marginTop:"-7px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1525168221/bitmap_3x.png" />
+									<img style={{width:"115px",height:"94px",marginTop:"-7px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1525245186/logo.png" />
 								</div>
 							</div>
 							{this._renderLogin()}
@@ -180,7 +178,8 @@ export function mapDispatchProps(dispatch)
 {
 	return bindActionCreators({
 		loginUSer,
-		registerUSer
+		registerUSer,
+		changeRegState,
 	},dispatch)
 }
 

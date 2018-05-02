@@ -54,7 +54,7 @@ body,html{
 .head_nav_style{
   border-radius: 0px;
   margin-bottom: 0px;
-  position: fixed;
+  //position: fixed;
   z-index: 1000;
   left: 0;
   right: 0;
@@ -83,7 +83,7 @@ body,html{
 }
 
 .navbar-inverse{
-  background: transparent;
+  background: #fff;
 }
 
 .home_countdown_block{
@@ -401,6 +401,11 @@ th,td{
   padding-top: 12%;
   padding-bottom: 2%
 }
+
+.crsl-heigt{
+  height: 68vh !important;
+}
+
 @media only screen and (max-width: 600px) {
   .home_padLogo{
     padding-left: 3%;
@@ -444,4 +449,14 @@ th,td{
     padding-top: 45%;
     padding-bottom: 2%
   }
+}
+@media (min-width:1281px) { 
+  .crsl-heigt{
+    //height: 650px;
+  }
+}
+
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+  background-color: #fff;
 }

@@ -14,11 +14,13 @@ export function RegisterReducer(state={isregisterd: false},
                     alert("Invalid details");
                     return {...state,isregisterd:false}
                 }
+                break;
                 
          }
          case "CHANGE_REG_STATE" :
          {
             return {...state,isregisterd:false}   
+            break;
          }
     }
     return state;

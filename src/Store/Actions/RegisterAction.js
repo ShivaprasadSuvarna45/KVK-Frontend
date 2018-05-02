@@ -4,3 +4,11 @@ export const registerUSer=()=>{
         payload:payload
     }
  }
+
+ export const changeRegState=()=>{
+    return{
+        type:"CHANGE_REG_STATE",
+        payload
+    }
+ }
+

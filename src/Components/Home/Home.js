@@ -20,7 +20,48 @@ class Home extends Component{
 
 	componentDidMount(){
     API_UTIL.getAllRecords();
-	}
+    let _that = this;
+
+    var timer;
+    
+    var compareDate = new Date();
+    var date2  = new Date(2018, 7, 11);
+    var timeDiff = Math.abs(date2.getTime() - compareDate.getTime());
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+    compareDate.setDate(compareDate.getDate() + diffDays);
+    
+    timer = setInterval(function() {
+      _that.timeBetweenDates(compareDate);
+    }, 1000);
+  }
+  
+  timeBetweenDates(toDate) {
+    var dateEntered = toDate;
+    var now = new Date();
+    var difference = dateEntered.getTime() - now.getTime();
+  
+    if (difference <= 0) {
+  
+      // Timer done
+      clearInterval(timer);
+    
+    } else {
+      
+      var seconds = Math.floor(difference / 1000);
+      var minutes = Math.floor(seconds / 60);
+      var hours = Math.floor(minutes / 60);
+      var days = Math.floor(hours / 24);
+  
+      hours %= 24;
+      minutes %= 60;
+      seconds %= 60;
+  
+      $("#days").text(days);
+      $("#hours").text(hours);
+      $("#minutes").text(minutes);
+      $("#seconds").text(seconds);
+    }
+  }
 
 	render(){
 
@@ -63,30 +104,30 @@ class Home extends Component{
                   </ol>
 
 
-                  <div className="carousel-inner" style={{height:"541px"}} >
-                      <div className="item active" style={{height:"541px"}}>
+                  <div className="carousel-inner crsl-heigt">
+                      <div className="item active crsl-heigt">
                         <p className="home_carosal_desc">Where we learnt the alphabet of language</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683847/KVK1.jpg" alt="KVK1" style={{width:"100%",height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683847/KVK1.jpg" alt="KVK1" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
-                      <div className="item" style={{height:"541px"}}>
+                      <div className="item crsl-heigt">
                         <p className="home_carosal_desc">And the Math for Life</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK2" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK2" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
-                      <div className="item" style={{height:"541px"}}>
+                      <div className="item crsl-heigt">
                         <p className="home_carosal_desc">Played as if there was no morrow</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683975/KVK3.jpg" alt="KVK3" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683975/KVK3.jpg" alt="KVK3" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
-											<div className="item" style={{height:"541px"}}>
+											<div className="item crsl-heigt">
                         <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK4" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK4" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
-											<div className="item" style={{height:"541px"}}>
+											<div className="item crsl-heigt">
                         <p className="home_carosal_desc">And made lifelong friends</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK5" style={{width:"100%", height:"541px"}}/>
+                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK5" style={{width:"100%"}} className="crsl-heigt"/>
                       </div>
                   </div>
 
@@ -114,7 +155,7 @@ class Home extends Component{
                   <div className="row">
                       <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
-                              <span className="home_countdown_letter">365</span>
+                              <span id="days" className="home_countdown_letter"></span>
                           </div>
                           <span className="home_days">DAYS</span>
                       </div>
@@ -122,17 +163,17 @@ class Home extends Component{
                           <div className="home_countdown_block">
                               <span className="home_countdown_letter">13</span>
                           </div>
-                          <span className="home_days">HOURS</span>
+                          <span id="hours" className="home_days">HOURS</span>
                           </div>
                       <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
-                              <span className="home_countdown_letter">48</span>
+                              <span id="minutes" className="home_countdown_letter"></span>
                           </div>
                           <span className="home_days">MINUTES</span>
                       </div>
                       <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
-                              <span className="home_countdown_letter">45</span>
+                              <span id="seconds" className="home_countdown_letter">45</span>
                           </div>
                           <span className="home_days">SECONDS</span>
                       </div>
@@ -156,8 +197,8 @@ class Home extends Component{
                       <span style={{float:"left"}}>Batch</span>
                       <span style={{float:"right"}}>1978-1985</span><br/>
 											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"50%",background:"#00a756"}}>
+											  <div className="progress-bar" role="progressbar" aria-valuenow="40"
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"40%",background:"#00a756"}}>
 											    <span className="sr-only">50</span>
 											  </div>
 											</div>
@@ -166,7 +207,7 @@ class Home extends Component{
                       <span style={{float:"right"}}>1986-1995</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"75%",background:"#00a756"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"45%",background:"#00a756"}}>
 											    <span className="sr-only">75</span>
 											  </div>
 											</div>
@@ -175,7 +216,7 @@ class Home extends Component{
                       <span style={{float:"right"}}>1996-2000</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"42%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -184,7 +225,7 @@ class Home extends Component{
                       <span style={{float:"right"}}>2001-2005</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"46%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -193,7 +234,7 @@ class Home extends Component{
                       <span style={{float:"right"}}>2006-2010</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"47%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>
@@ -202,7 +243,7 @@ class Home extends Component{
                       <span style={{float:"right"}}>2011-2015</span><br/>
 											<div className="progress">
 											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"87%",background:"#00a756"}}>
+											  aria-valuemin="0" aria-valuemax="100" style={{width:"47%",background:"#00a756"}}>
 											    <span className="sr-only">87</span>
 											  </div>
 											</div>

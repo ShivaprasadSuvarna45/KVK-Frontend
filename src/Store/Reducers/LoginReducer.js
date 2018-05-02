@@ -31,7 +31,7 @@ export function LoginReducer(state={userDetails: {},islogin:false},action){
          }
 
         case "UPDATED" :{
-            alert(payload.msg)
+            alert(action.payload.msg)
             return {...state,userDetails:action.payload.res.data,islogin:true}
         }
     }
