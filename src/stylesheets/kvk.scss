@@ -405,7 +405,12 @@ th,td{
 .crsl-heigt{
   height: 68vh !important;
 }
-
+.regPad{
+  padding-left: 98px;
+}
+.batchMarg{
+  margin-left: 30px;
+}
 @media only screen and (max-width: 600px) {
   .home_padLogo{
     padding-left: 3%;
@@ -449,14 +454,23 @@ th,td{
     padding-top: 45%;
     padding-bottom: 2%
   }
-}
-@media (min-width:1281px) { 
-  .crsl-heigt{
-    //height: 650px;
+  .regPad{
+    padding-left: 60px;
+  }
+  .batchMarg{
+    margin-left: 0px;
   }
 }
 
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
   background-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+  border-color: #fff;
+}
+.navbar-inverse .navbar-toggle {
+  background-color: #333;
+  border-color: none;
 }

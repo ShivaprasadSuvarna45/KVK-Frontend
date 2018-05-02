@@ -92,7 +92,7 @@ class Home extends Component{
       <div style={{width:"100%"}}>
 
 
-          <div className="container" style={{width:"100%", padding:0}}>
+          <div className="container" style={{width:"100%", padding:0,paddingTop:"108px"}}>
               <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="2000">
 
                   <ol className="carousel-indicators" style={{bottom:"0px"}}>
@@ -161,9 +161,9 @@ class Home extends Component{
                       </div>
                       <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
-                              <span className="home_countdown_letter">13</span>
+                              <span id="hours" className="home_countdown_letter"></span>
                           </div>
-                          <span id="hours" className="home_days">HOURS</span>
+                          <span className="home_days">HOURS</span>
                           </div>
                       <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
@@ -192,7 +192,7 @@ class Home extends Component{
                     <p className="home_description">Be there. With your spouses. Relive the time of your life.</p>
                 </div>
 								
-                <div className="col-sm-3 col-lg-3" style={{padding:"30px",paddingTop:"2%",marginLeft:"30px"}}>
+                <div className="col-sm-3 col-lg-3 batchMarg" style={{padding:"30px",paddingTop:"2%"}}>
 											<p className="home_description">Lots Of Friends are coming</p>
                       <span style={{float:"left"}}>Batch</span>
                       <span style={{float:"right"}}>1978-1985</span><br/>

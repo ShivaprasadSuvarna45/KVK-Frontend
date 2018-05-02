@@ -70,7 +70,7 @@ class Header extends Component{
 	_renderLogin(){
 		if(this.props.islogin){
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",height:"105px",}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",background: "#fff"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
 					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
@@ -82,7 +82,7 @@ class Header extends Component{
 		}
 		else{
 			return(
-				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",height:"105px",paddingTop:"27px"}}>
+				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",background: "#fff"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
 					<li><a className="head_font_color" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Register</a></li>
 					<li className="dropdown removpos">
@@ -113,7 +113,7 @@ class Header extends Component{
 													<button type="button" className="close close_btn" data-dismiss="modal" onClick={this.changeRegisterState.bind(this)}>&times;</button>
 
 												</div>
-												<div className="modal-body" style={{textAlign:"left",paddingLeft:"98px"}}>
+												<div className="modal-body regPad" style={{textAlign:"left"}}>
 													<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
 													<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
 													<span className="modal-title modal1_head" >Enter your Batch</span><br/><br/>
@@ -144,16 +144,23 @@ class Header extends Component{
 
 		return (
 				<div style={{width:"100%"}}>
-					<nav id="headnav" className="navbar navbar-inverse head_nav_style navtransparent" style={{borderRadius:0,marginBottom:0,opacity: 0.9}}>
+					<nav className="navbar navbar-inverse head_nav_style" id="headnav" style={{height:"108px",position:"fixed"}}>
 						<div className="container-fluid">
 							<div className="navbar-header">
-								<div className="navbar-brand home_padLogo">
+							<button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style={{top:"25px"}}>
+								<span className="icon-bar"></span>
+								<span className="icon-bar"></span>
+								<span className="icon-bar"></span>                        
+							</button>
+							<a className="navbar-brand" href="#">
 									<img style={{width:"115px",height:"94px",marginTop:"-7px"}} src="http://res.cloudinary.com/dldgtfchi/image/upload/v1525245186/logo.png" />
-								</div>
+							</a>
 							</div>
-							{this._renderLogin()}
+							<div className="collapse navbar-collapse" id="myNavbar">
+								{this._renderLogin()}
+							</div>
 						</div>
-					</nav>
+						</nav>
 
 					<div id="myModal" className="modal fade" role="dialog">
 						<div className="modal-dialog">
