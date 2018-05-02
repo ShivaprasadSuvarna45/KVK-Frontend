@@ -266,32 +266,77 @@ class Home extends Component{
           <p className="home_prg_pp">PROGRAM</p>
           <table id="home_prg_tbl">
             <tr>
-              <td className="home_tbl_dtls">8:30 AM to 10:30 AM</td>
-              <td className="home_tbl_dtls">Arrivals and Registrations – Collect your badges, goodie bags, coupons. Meet & Greet / Hugs & Kisses with old pals you can recall and …those you cannot recall (but they can!).   Dig into Breakfast or just have coffee or tea
-              Take Selfies/Groufies wherever you like or specially at the photo stations.</td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>8:30 AM to 10:30 AM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Arrivals and Registrations – Collect your badges, goodie bags, coupons.</p> 
+                <p>Meet & Greet / Hugs & Kisses with old pals you can recall and …those you cannot recall (but they can!).</p>
+                <p>Dig into Breakfast or just have coffee or tea</p>
+                <p>Take Selfies/Groufies wherever you like or specially at the photo stations.</p>
+              </td>
             </tr>
             <tr>
-              <td className="home_tbl_dtls">10:30 AM to 12.30 PM</td>
-              <td className="home_tbl_dtls">Gather in the banquet hall, The formal ceremony starts with Lighting of the lamp and Invocation to the Almighty, Some of our teachers and alumni share a few words.  Felicitation of teachers present for the occasion.</td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>10:30 AM to 12.30 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Gather in the banquet hall</p> 
+                <p>The formal ceremony starts with Lighting of the lamp and Invocation to the Almighty</p>
+                <p>Some of our teachers and alumni share a few words</p>
+                <p>Felicitation of teachers present for the occasion</p>
+              </td>
             </tr>
             <tr>
-              <td className="home_tbl_dtls">12:30 onwards till 6 PM</td>
-              <td className="home_tbl_dtls">Formal Group photos of each batch begins and will continue through till 6 PM while the rest of events continue in parallel. </td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 onwards till 6 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Formal Group photos of each batch begins and will continue through till 6 PM while the rest of events continue in parallel.</p>
+              </td>
             </tr>
             <tr>
-              <td className="home_tbl_dtls">12:30 PM to 2:30 PM</td>
-              <td className="home_tbl_dtls">Relaxed Lunch with friends, teachers – New conversations, Peals of laughter on old times and new. Walk around and forge new ties – personal and professional. More pictures, More Selfies, More Memories to take back for life</td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 PM to 2:30 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Relaxed Lunch with friends, teachers – New conversations, Peals of laughter on old times and new.</p> 
+                <p>Walk around and forge new ties – personal and professional</p>
+                <p>More pictures, More Selfies, More Memories to take back for life</p>
+              </td>
             </tr>
             <tr>
-              <td className="home_tbl_dtls">2:30 PM to 4 PM</td>
-              <td className="home_tbl_dtls">Cultural activities and competitions. Bring on the competitive spirit of the Houses at school for the CCA activities. Be like then. Entertain and be Entertained!
-              Batch-wise Group photos continue at the Group Photo booth.</td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>2:30 PM to 4 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Cultural activities and competitions</p> 
+                <p>Bring on the competitive spirit of the Houses at school for the CCA activities.</p>
+                <p>Be like then.</p>
+                <p>Entertain and be Entertained!</p>
+                <p>Batch-wise Group photos continue at the Group Photo booth</p>
+              </td>
             </tr>
             <tr>
-              <td className="home_tbl_dtls">4PM to 6 PM</td>
-              <td className="home_tbl_dtls">Sports Activities and competitions. As the August sun goes down – time for some outdoors. 
-              Gents - Put on the Sacks to race and Ladies - keep the lemon on the spoon and plenty more. Theme based Professional meet-up tracks on the Sidelines – meet and network with alumni around various themes/tracks. </td>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>4PM to 6 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Sports Activities and competitions</p> 
+                <p>As the August sun goes down – time for some outdoors.</p>
+                <p>Gents - Put on the Sacks to race and Ladies - keep the lemon on the spoon and plenty more.</p>
+                <p>Theme based Professional meet-up tracks on the Sidelines – meet and network with alumni around various themes/tracks</p>
+                <p>Batch-wise Group photos continue at the Group Photo booth</p>
+                <p>High Tea starts at 5 PM</p>
+              </td>
             </tr>
+            <tr>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>6:30 PM to 8:30 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>Gala Evening with Sunset Sangeeth</p> 
+                <p>The darkness of sunset gives way to the array of lights, strobes and smoke machines on the stage.</p>
+                <p>Enjoy the musical performance of professional Singers.</p>
+                <p>Relax with your fav drink and friends on tables laid out; or Put on your dancing shoes for the dance floor.</p>
+                <p>Dinner starts at 8:30 PM</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="home_tbl_dtls" style={{width:"17%"}}>8:45 PM to 10:30 PM</td>
+              <td className="home_tbl_dtls" style={{width:"64%"}}>
+                <p>The DJ takes over…</p> 
+                <p>… and the Dancing continues…</p>
+                <p>Amidst goodbyes and promises to meet again, until the next time…. <i>Kabhi Alvida Na Kehna</i></p>
+              </td>
+            </tr>
+            
           </table>
         </div>
       </div>
