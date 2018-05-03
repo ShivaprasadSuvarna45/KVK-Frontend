@@ -70,10 +70,10 @@ class Api{
       }
       getSerachResults(data){
             let img_links = [];
-            axios.get(KVKURL+'/getalbums?batch='+data.batch+"&username="+data.username+"&attend_event="+data.attend_event)
+            axios.get(KVKURL+"/getalbums?batch="+data.batch+"&username="+data.username+"&attend_event="+data.attend_event)
             .then(function(res){
                   for(let i=0;i<res.data.length; i++){
-                        img_links.push(res.data[i].profile_photo)
+                        img_links.push({profile_photo:res.data[i].profile_photo,username:res.data[i].username,batch:res.data[i].batch,email:res.data[i].email,profession:res.data[i].family_members});
                   }
                   console.log(img_links);
                   store.dispatch({type:"SEARCH_RESULT",payload:img_links});

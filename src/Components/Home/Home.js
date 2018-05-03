@@ -66,6 +66,7 @@ class Home extends Component{
 	render(){
 
     this.render_slick = <div></div>
+    this.render_table = <div></div>
     if(this.props.album_profile.length > 3){
           this.render_slick = this.props.album_profile.map((ele,index) => {
             return(              
@@ -79,6 +80,95 @@ class Home extends Component{
           });
     }
     
+    if(this.props.islogin){
+        this.render_table = <div className="home_prg_divv">
+                                <p className="home_prg_pp">PROGRAM</p>
+                                <table id="home_prg_tbl">
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>8:30 AM to 10:30 AM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Arrivals and Registrations – Collect your badges and coupons</p> 
+                                      <p>Meet & Greet / Hugs & Kisses with old pals you can recall and …those you cannot recall (but they can!).</p>
+                                      <p>Dig into Breakfast or just have coffee or tea</p>
+                                      <p>Take Selfies/Groufies wherever you like or specially at the photo stations.</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>10:30 AM to 12.30 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Gather in the banquet hall</p> 
+                                      <p>The formal ceremony starts with Lighting of the lamp and Invocation to the Almighty</p>
+                                      <p>Some of our teachers and alumni share a few words</p>
+                                      <p>Felicitation of teachers present for the occasion</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 onwards till 6 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Formal Group photos of each batch begins and will continue through till 6 PM while the rest of events continue in parallel.</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 PM to 2:30 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Relaxed Lunch with friends, teachers – New conversations, Peals of laughter on old times and new.</p> 
+                                      <p>Walk around and forge new ties – personal and professional</p>
+                                      <p>More pictures, More Selfies, More Memories to take back for life</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>2:30 PM to 4 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Cultural activities and competitions</p> 
+                                      <p>Bring on the competitive spirit of the Houses at school for the CCA activities.</p>
+                                      <p>Be like then.</p>
+                                      <p>Entertain and be Entertained!</p>
+                                      <p>Batch-wise Group photos continue at the Group Photo booth</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>4PM to 6 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Sports Activities and competitions</p> 
+                                      <p>As the August sun goes down – time for some outdoors.</p>
+                                      <p>Gents - Put on the Sacks to race and Ladies - keep the lemon on the spoon and plenty more.</p>
+                                      <p>Theme based Professional meet-up tracks on the Sidelines – meet and network with alumni around various themes/tracks</p>
+                                      <p>Batch-wise Group photos continue at the Group Photo booth</p>
+                                      <p>High Tea starts at 5 PM</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>6:30 PM to 8:30 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>Gala Evening with Sunset Sangeeth</p> 
+                                      <p>The darkness of sunset gives way to the array of lights, strobes and smoke machines on the stage.</p>
+                                      <p>Enjoy the musical performance of professional Singers.</p>
+                                      <p>Relax with your fav drink and friends on tables laid out; or Put on your dancing shoes for the dance floor.</p>
+                                      <p>Dinner starts at 8:30 PM</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td className="home_tbl_dtls" style={{width:"17%"}}>8:45 PM to 10:30 PM</td>
+                                    <td className="home_tbl_dtls" style={{width:"64%"}}>
+                                      <p>The DJ takes over…</p> 
+                                      <p>… and the Dancing continues…</p>
+                                      <p>Amidst goodbyes and promises to meet again, until the next time…. <i>Kabhi Alvida Na Kehna</i></p>
+                                    </td>
+                                  </tr>
+                                  
+                                </table>
+                                <i>Above is an Indicative Program; May change depending on availability of resources;</i>
+                             </div>
+    }
+    else{
+          this.render_table = <div className="home_prg_divv">
+                                  <p className="subtext">How do I register at this website for a login?</p>
+                                  <p className="text">If you have not enrolled yourself into the KVK database enrolment form we have been circulating since January 2018, then you need to register giving the details about yourself, the year you passed your X (whether in KVK or elsewhere as we are using X pass as the reference year), your email address. </p>
+                                  <p className="text">The details you entered will be verified and post verification (It will take 3-4 days) you will receive a OTP in your registered email to login to the website.</p>
+                                  <p className="text">If you have already enrolled yourself into the KVK database, then you do not need to register. We have your details. Just enter the email address you gave at the time of enrolment and you will receive the login and password in your mailbox.</p>
+                              </div>
+    }
+
 		var settings = {
 			lazyLoad: 'ondemand',
 		  slidesToShow: 3,
@@ -87,13 +177,12 @@ class Home extends Component{
   		autoplaySpeed: 1500,
 			arrows:false
     };
-
 		return (
       <div style={{width:"100%"}}>
 
 
           <div className="container" style={{width:"100%", padding:0,paddingTop:"108px"}}>
-              <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="2000">
+              <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="3500">
 
                   <ol className="carousel-indicators" style={{bottom:"0px"}}>
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -106,26 +195,31 @@ class Home extends Component{
 
                   <div className="carousel-inner crsl-heigt">
                       <div className="item active crsl-heigt">
+                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
                         <p className="home_carosal_desc">Where we learnt the alphabet of language</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335249/Picture1.png" alt="KVK1" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
+                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
                         <p className="home_carosal_desc">And the Math for Life</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335393/Picture2.png" alt="KVK2" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
+                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p> 
                         <p className="home_carosal_desc">Played as if there was no morrow</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335499/Picture3.png" alt="KVK3" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
+                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
                         <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335624/Picture4.png" alt="KVK4" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
+                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
                         <p className="home_carosal_desc">And made lifelong friends</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335688/Picture5.png" alt="KVK5" style={{width:"100%"}} className="crsl-heigt"/>
                       </div>
@@ -182,8 +276,9 @@ class Home extends Component{
             </div>
         </div>
         <div className="container-fluid">
+    
             <div className="row">
-                <div className="col-sm-8 col-lg-8" style={{padding:"30px",paddingTop:"40px"}}>
+                <div className="col-sm-12 col-lg-12 col-xs-12" style={{padding: "5% 15%"}}>
                     
                     <p className="home_description">No one in this world is rich enough to buy his own childhood and youth back. Only old friends help to recreate those moments from time to time.</p>
                     <p className="home_description">And to do this - The first grand reunion of all of us who went to study in Kendriya Vidyalaya Kudremukh is happening on August 11th 2018 at Bengaluru – for you to Relive the years spent at the school and Kudremukh in a one day time-lapse, if you will.</p>
@@ -191,161 +286,26 @@ class Home extends Component{
                     <p className="home_description">While we cannot go back there as the school is closed and Kudremukh is now a reserve forest area the magic of our childhood will be recreated on August 11th 2018 at the “Chota school Bada Reunion”</p>
                     <p className="home_description">Be there. With your spouses. Relive the time of your life.</p>
                 </div>
-								
-                <div className="col-sm-3 col-lg-3 batchMarg" style={{padding:"30px",paddingTop:"2%"}}>
-											<p className="home_description">Lots Of Friends are coming</p>
-                      <span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>1978-1985</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="40"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"40%",background:"#00a756"}}>
-											    <span className="sr-only">50</span>
-											  </div>
-											</div>
-
-											<span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>1986-1995</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"45%",background:"#00a756"}}>
-											    <span className="sr-only">75</span>
-											  </div>
-											</div>
-
-											<span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>1996-2000</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"42%",background:"#00a756"}}>
-											    <span className="sr-only">87</span>
-											  </div>
-											</div>
-
-                      <span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>2001-2005</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"46%",background:"#00a756"}}>
-											    <span className="sr-only">87</span>
-											  </div>
-											</div>
-
-                      <span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>2006-2010</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"47%",background:"#00a756"}}>
-											    <span className="sr-only">87</span>
-											  </div>
-											</div>
-
-                      <span style={{float:"left"}}>Batch</span>
-                      <span style={{float:"right"}}>2011-2015</span><br/>
-											<div className="progress">
-											  <div className="progress-bar" role="progressbar" aria-valuenow="70"
-											  aria-valuemin="0" aria-valuemax="100" style={{width:"47%",background:"#00a756"}}>
-											    <span className="sr-only">87</span>
-											  </div>
-											</div>
-
-
-                </div>
-                <div className="col-sm-1 col-lg-1"></div>
             </div>
         </div>
         <div style={{marginLeft:"7%",maginBottom:"2%"}}>
                   <Slider {...settings}>
                       {this.render_slick}
                   </Slider>
-          </div>
+        </div>
 
         <div className="home_want_to_see">
           <Link className="home_want_to_see" to={{ pathname: "/Gallery", state: { gotToSearch: true} }}>Want to see who is coming....?</Link>
         </div>
-        <div className="home_prg_divv">
-          <p className="home_prg_pp">PROGRAM</p>
-          <table id="home_prg_tbl">
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>8:30 AM to 10:30 AM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Arrivals and Registrations – Collect your badges, goodie bags, coupons.</p> 
-                <p>Meet & Greet / Hugs & Kisses with old pals you can recall and …those you cannot recall (but they can!).</p>
-                <p>Dig into Breakfast or just have coffee or tea</p>
-                <p>Take Selfies/Groufies wherever you like or specially at the photo stations.</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>10:30 AM to 12.30 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Gather in the banquet hall</p> 
-                <p>The formal ceremony starts with Lighting of the lamp and Invocation to the Almighty</p>
-                <p>Some of our teachers and alumni share a few words</p>
-                <p>Felicitation of teachers present for the occasion</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 onwards till 6 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Formal Group photos of each batch begins and will continue through till 6 PM while the rest of events continue in parallel.</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>12:30 PM to 2:30 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Relaxed Lunch with friends, teachers – New conversations, Peals of laughter on old times and new.</p> 
-                <p>Walk around and forge new ties – personal and professional</p>
-                <p>More pictures, More Selfies, More Memories to take back for life</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>2:30 PM to 4 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Cultural activities and competitions</p> 
-                <p>Bring on the competitive spirit of the Houses at school for the CCA activities.</p>
-                <p>Be like then.</p>
-                <p>Entertain and be Entertained!</p>
-                <p>Batch-wise Group photos continue at the Group Photo booth</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>4PM to 6 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Sports Activities and competitions</p> 
-                <p>As the August sun goes down – time for some outdoors.</p>
-                <p>Gents - Put on the Sacks to race and Ladies - keep the lemon on the spoon and plenty more.</p>
-                <p>Theme based Professional meet-up tracks on the Sidelines – meet and network with alumni around various themes/tracks</p>
-                <p>Batch-wise Group photos continue at the Group Photo booth</p>
-                <p>High Tea starts at 5 PM</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>6:30 PM to 8:30 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>Gala Evening with Sunset Sangeeth</p> 
-                <p>The darkness of sunset gives way to the array of lights, strobes and smoke machines on the stage.</p>
-                <p>Enjoy the musical performance of professional Singers.</p>
-                <p>Relax with your fav drink and friends on tables laid out; or Put on your dancing shoes for the dance floor.</p>
-                <p>Dinner starts at 8:30 PM</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="home_tbl_dtls" style={{width:"17%"}}>8:45 PM to 10:30 PM</td>
-              <td className="home_tbl_dtls" style={{width:"64%"}}>
-                <p>The DJ takes over…</p> 
-                <p>… and the Dancing continues…</p>
-                <p>Amidst goodbyes and promises to meet again, until the next time…. <i>Kabhi Alvida Na Kehna</i></p>
-              </td>
-            </tr>
-            
-          </table>
-        </div>
+        {this.render_table}
       </div>
     )
 	}
 }
 export function mapStateToProps(state){
 	return {
-		album_profile : state.SearchState.album_profile
+    album_profile : state.SearchState.album_profile,
+    islogin : state.LoginState.islogin
 	}
 }
 

@@ -106,14 +106,24 @@ body,html{
 }
 .home_description{
 	text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
+  font-weight: 500;
 }
 .home_carosal_desc{
   position: absolute;
   font-size: 50px;
   font-weight: 900;
-  bottom: 43%;
+  bottom: 60%;
+  color: #fff; // rgb(12, 204, 207);
+  width: 100%;
+  text-align: center;
+}
+.home_carosal_desc1{
+  position: absolute;
+  font-size: 50px;
+  font-weight: 900;
+  bottom: 75%;
   color: #fff; // rgb(12, 204, 207);
   width: 100%;
   text-align: center;
@@ -132,6 +142,7 @@ body,html{
   padding-left: 7%;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 10%;
 }
 .home_prg_pp{
   font-size: 20px;
@@ -142,7 +153,7 @@ body,html{
 }
 #home_prg_tbl{
   border: 1px solid #4a4a4a;
-  width: 80%;
+  width: 95%;
 }
 .home_tbl_dtls{
   padding: 20px;
@@ -457,6 +468,14 @@ th,td{
   }
   .batchMarg{
     margin-left: 0px;
+  }
+  .home_carosal_desc{
+    font-size: 40px;
+    bottom: 36%;
+  }
+  .home_carosal_desc1{
+    font-size: 40px;
+    bottom: 70%;
   }
 }
 

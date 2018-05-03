@@ -16,6 +16,7 @@ class Header extends Component{
 		this._login = this._login.bind(this);
 		this._regOpen = this._regOpen.bind(this);
 		this.changeRegisterState = this.changeRegisterState.bind(this);
+		this.handleCheck = this.handleCheck.bind(this);
 		this.state = {
 			islogin:false,
 			regDeails : {
@@ -23,7 +24,8 @@ class Header extends Component{
 				batch: '',
 				name:''
 			},
-			isTop: true
+			isTop: true,
+			checked : true,
 		}
 	}
 	componentDidMount(){
@@ -39,6 +41,10 @@ class Header extends Component{
 			}
 		  });
 
+	}
+
+	handleCheck() {
+		this.setState({checked: !this.state.checked});
 	}
 
 	_submitmail(){
@@ -72,6 +78,7 @@ class Header extends Component{
 			return(
 				<ul id="newid" className="nav navbar-nav navblack" style={{float:"right",paddingTop:"27px",background: "#fff"}}>
 					<li><Link className="head_font_color" to="/">Home</Link></li>
+					<li><Link className="head_font_color" to="/Searchfriend">SearchFriend</Link></li>
 					<li><Link className="head_font_color" to="/About">About</Link></li>
 					<li><Link className="head_font_color" to="/FAQ">FAQ</Link></li>
 					<li><Link className="head_font_color" to="/Gallery">Gallery</Link></li>
@@ -108,21 +115,35 @@ class Header extends Component{
 
 	render(){
 		if(this.props.myregstate === false){
-			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
-												<div className="modal-header modal1_head" style={{border:"none",textAlign:"center"}}>
-													<button type="button" className="close close_btn" data-dismiss="modal" onClick={this.changeRegisterState.bind(this)}>&times;</button>
+			if(this.state.checked){
+				this.enrollData = (<div>
+										<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
+										<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
+									</div>);
+				this.enrollBtn = (<div><button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button></div>);
+			}
+			else{
+				this.enrollData = (<div>
+										<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
+										<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
+										<span className="modal-title modal1_head" >Enter your Batch</span><br/><br/>
+										<input id="regbatch" type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
+										<span className="modal-title modal1_head" >Enter your Name</span><br/><br/>
+										<input id="regname" type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
+									</div>);
+				this.enrollBtn = (<div><button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button></div>);
 
+			}
+			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
+												<div className="modal-header modal1_head" style={{border:"none"}}>
+													<button type="button" className="close close_btn" data-dismiss="modal" onClick={this.changeRegisterState.bind(this)}>&times;</button>
+													<div style={{paddingLeft:"14%",paddingTop:"10%"}}><input type="checkbox" onChange={this.handleCheck.bind(this)}  defaultChecked={this.state.checked}/> <span> : For enrolled user</span></div>
 												</div>
 												<div className="modal-body regPad" style={{textAlign:"left"}}>
-													<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
-													<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
-													<span className="modal-title modal1_head" >Enter your Batch</span><br/><br/>
-													<input id="regbatch" type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
-													<span className="modal-title modal1_head" >Enter your Name</span><br/><br/>
-													<input id="regname" type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
+													{this.enrollData}
 												</div>
 												<div className="modal-footer modal1_bottom_container" style={{border:"none",textAlign:"center"}}>
-													<button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button>
+													{this.enrollBtn}
 												</div>
 											</div>
 		}

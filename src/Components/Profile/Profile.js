@@ -68,8 +68,8 @@ class Profile extends Component{
         }
         var e = document.getElementById("updmeal");
         updVal.meal_preference = e.options[e.selectedIndex].text;
-        updVal.spouse = document.getElementById("updspouse").value.trim();
-        updVal.t_shirt_size = document.getElementById("updtshirt").value.trim();
+        var e1 = document.getElementById("updspouse");
+        updVal.spouse = e1.options[e1.selectedIndex].text;
         updVal.family_members = document.getElementById("updFamily").value.trim();      
         updVal.contribution_amount = parseInt(document.getElementById("updconamt").value.trim());      
         updVal.paid_via = document.getElementById("updpaidvia").value.trim();      
@@ -190,10 +190,8 @@ class Profile extends Component{
             e.options[e.selectedIndex].text = this.props.userDetails.meal_preference;
         }
         if(this.props.userDetails.spouse){
-            document.getElementById("updspouse").value = this.props.userDetails.spouse;
-        }
-        if(this.props.userDetails.t_shirt_size){
-            document.getElementById("updtshirt").value = this.props.userDetails.t_shirt_size;   
+            var e1 = document.getElementById("updspouse");
+            e1.options[e1.selectedIndex].text = this.props.userDetails.spouse;
         }
         if(this.props.userDetails.family_members){
             document.getElementById("updFamily").value = this.props.userDetails.family_members;
@@ -305,11 +303,12 @@ class Profile extends Component{
                             <option value="nonvegetarian">Non Vegetarian</option>
                         </select><br/><br/>
                         <span>Coming with Spouse?</span><br/>
-                        <input id="updspouse" className="profile_arrival" type="text" /><br/>
+                        <select id="updspouse" className="profile_arrival">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select><br/><br/>
                     </div>
                     <div className="col-sm-4 col-lg-4">
-                        <span>T-Shirt Size</span><br/>
-                        <input id="updtshirt" className="profile_arrival" type="text" /><br/>
                         <span>Your current profession</span><br/>
                         <input id="updFamily" className="profile_arrival" type="text" /><br/>
                     </div>
