@@ -28,9 +28,9 @@ class Profile extends Component{
 
     componentDidMount(){
         cloudinary.config({ 
-            cloud_name: 'dldgtfchi', 
-            api_key: '132714543514181', 
-            api_secret: 'vE6kExM67asY6EV1VmZRJU0-sFQ' 
+            cloud_name: 'doifpsy95', 
+            api_key: '512551122167763', 
+            api_secret: 'z-o3BS3F8VtbViNk8U9KO7lGIHo' 
         });
         console.log(this.props.userDetails);
         if(this.props.userDetails.username){
@@ -103,7 +103,15 @@ class Profile extends Component{
         debugger;
         formData.append('file', imageFile);
         cloudinary.uploader.upload(imageFile, function(result) { 
-            _that.setState({default_src:result.secure_url});
+            if(result.error){
+                if(result.error.http_code == 400){
+                    alert("Cannot upload image which is more than 9MB");
+                }
+            }
+            else{
+                _that.setState({default_src:result.secure_url});
+            }
+            
         });
     }
 
@@ -121,9 +129,17 @@ class Profile extends Component{
             //_that.setState({default_src:result.secure_url});
             console.log(result);
             _that.setState({loading:false});
-            _that.setState({
-                album_imgs: [..._that.state.album_imgs, result.secure_url]
-            });
+            if(result.error){
+                if(result.error.http_code == 400){
+                    alert("Cannot upload image which is more than 9MB");
+                }
+            }
+            else{
+                _that.setState({
+                    album_imgs: [..._that.state.album_imgs, result.secure_url]
+                });
+            }
+            
         });
     }
 

@@ -107,27 +107,27 @@ class Home extends Component{
                   <div className="carousel-inner crsl-heigt">
                       <div className="item active crsl-heigt">
                         <p className="home_carosal_desc">Where we learnt the alphabet of language</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683847/KVK1.jpg" alt="KVK1" style={{width:"100%"}} className="crsl-heigt" />
+                        <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335249/Picture1.png" alt="KVK1" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
                         <p className="home_carosal_desc">And the Math for Life</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684042/KVK4.jpg" alt="KVK2" style={{width:"100%"}} className="crsl-heigt" />
+                        <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335393/Picture2.png" alt="KVK2" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
                         <p className="home_carosal_desc">Played as if there was no morrow</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524683975/KVK3.jpg" alt="KVK3" style={{width:"100%"}} className="crsl-heigt" />
+                        <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335499/Picture3.png" alt="KVK3" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
                         <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684413/KVK_12.jpg" alt="KVK4" style={{width:"100%"}} className="crsl-heigt" />
+                        <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335624/Picture4.png" alt="KVK4" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
                         <p className="home_carosal_desc">And made lifelong friends</p>
-                        <img src="http://res.cloudinary.com/dldgtfchi/image/upload/v1524684136/KVK6.jpg" alt="KVK5" style={{width:"100%"}} className="crsl-heigt"/>
+                        <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335688/Picture5.png" alt="KVK5" style={{width:"100%"}} className="crsl-heigt"/>
                       </div>
                   </div>
 
