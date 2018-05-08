@@ -3,17 +3,42 @@ import store from '../Store/store';
 const WebScoketURI="WSS://abudhabi-server.herokuapp.com";
 const URL="https://abudhabi-server.herokuapp.com";
 
-const KVKURL = "http://localhost:8000";
+const KVKURL = "https://kvk-backend.herokuapp.com";
 
 class Api{
       registerUser(data){
             axios.post(KVKURL+'/register',{
-                "mail":data.email,
-                "username":data.name,
-                "batch":data.batch  
+                "mail":data.email
             })
             .then(function(res){
-                  store.dispatch({type:"REGISTER_USER",payload:"registered"});                  
+                  if(res.data === "Not a enrolled user"){
+                        store.dispatch({type:"REGISTER_USER",payload:"invalid details"});
+                  }
+                  else{
+                        store.dispatch({type:"REGISTER_USER",payload:"registered"}); 
+                  }
+                                   
+            })
+            .catch(function(error){
+                  store.dispatch({type:"REGISTER_USER",payload:"invalid details"});
+            })
+      }
+
+      registerNewUser(data){
+            axios.post(KVKURL+'/newregister',{
+                "mail":data.email,
+                "username":data.name,
+                "batch":data.batch,
+                "phone":data.phone
+            })
+            .then(function(res){
+                  if(res.data === "Not registered"){
+                        alert("Your details not entered, please try later")
+                  }
+                  else{
+                        store.dispatch({type:"REGISTER_NEW_USER",payload:"registered"});   
+                  }
+                                   
             })
             .catch(function(error){
                   store.dispatch({type:"REGISTER_USER",payload:"invalid details"});

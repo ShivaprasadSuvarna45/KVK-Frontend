@@ -12,6 +12,7 @@ class Header extends Component{
 		super(props)
 
 		this._submitmail = this._submitmail.bind(this);
+		this._submitAllData = this._submitAllData.bind(this)
 		this._logout = this._logout.bind(this);
 		this._login = this._login.bind(this);
 		this._regOpen = this._regOpen.bind(this);
@@ -47,11 +48,18 @@ class Header extends Component{
 		this.setState({checked: !this.state.checked});
 	}
 
-	_submitmail(){
+	_submitAllData(){
 		let regVals = {	};
 		regVals.email = document.getElementById("regemail").value.trim();
 		regVals.batch = document.getElementById("regbatch").value.trim();
 		regVals.name = document.getElementById("regname").value.trim();
+		regVals.phone = document.getElementById("regphone").value.trim();
+		API_UTIL.registerNewUser(regVals);
+	}
+
+	_submitmail(){
+		let regVals = {	};
+		regVals.email = document.getElementById("regemail1").value.trim();
 		API_UTIL.registerUser(regVals);
 	}
 	_regOpen(){
@@ -118,7 +126,7 @@ class Header extends Component{
 			if(this.state.checked){
 				this.enrollData = (<div>
 										<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
-										<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
+										<input id="regemail1" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
 									</div>);
 				this.enrollBtn = (<div><button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button></div>);
 			}
@@ -130,8 +138,10 @@ class Header extends Component{
 										<input id="regbatch" type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
 										<span className="modal-title modal1_head" >Enter your Name</span><br/><br/>
 										<input id="regname" type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
+										<span className="modal-title modal1_head" >Enter your Phone number</span><br/><br/>
+										<input id="regphone" type="text" placeholder="Enter Phone Number" className="modal1_inputemail"/><br/><br/>
 									</div>);
-				this.enrollBtn = (<div><button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitmail.bind(this)}>Submit</button></div>);
+				this.enrollBtn = (<div><button type="button" style={{marginRight:"9%"}} className="modal1_submit" onClick={this._submitAllData.bind(this)}>Submit</button></div>);
 
 			}
 			this.modalData = <div className="modal-content" style={{marginTop:"30px"}}>
@@ -155,7 +165,7 @@ class Header extends Component{
 												</div>
 												<div className="modal-body" style={{textAlign:"center",}}>
 													<div className=".modal1_thanks">
-													<p style={{width:"75%",paddingLeft:"20%"}}>Thanks for registering. You will receive an email with user ID and Password</p>
+													<p style={{width:"75%",paddingLeft:"20%"}}>{this.props.regMsg}</p>
 												</div></div>
 												<div className="modal-footer modal1_bottom_container" style={{border:"none",textAlign:"center"}}>
 												</div>
@@ -198,6 +208,7 @@ class Header extends Component{
 export function mapStateToProps(state){
 	return {
 		myregstate : state.RegisterState.isregisterd,
+		regMsg : state.RegisterState.regMsg,
 		islogin : state.LoginState.islogin
 	}
 }
