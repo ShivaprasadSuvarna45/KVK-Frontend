@@ -4,6 +4,7 @@ const WebScoketURI="WSS://abudhabi-server.herokuapp.com";
 const URL="https://abudhabi-server.herokuapp.com";
 
 const KVKURL = "https://kvk-backend.herokuapp.com";
+//const KVKURL = "http://localhost:8000";
 
 class Api{
       registerUser(data){

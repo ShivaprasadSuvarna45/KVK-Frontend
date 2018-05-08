@@ -309,7 +309,7 @@ class Profile extends Component{
                         </select><br/><br/>
                     </div>
                     <div className="col-sm-4 col-lg-4">
-                        <span>Your current profession</span><br/>
+                        <span>Your current profession:</span><br/>
                         <input id="updFamily" className="profile_arrival" type="text" /><br/>
                     </div>
                 </div>
