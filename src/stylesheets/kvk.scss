@@ -420,6 +420,16 @@ th,td{
 .batchMarg{
   margin-left: 30px;
 }
+.school_desc{
+  padding: 5% 15%;
+}
+.searchfriend{
+  padding-top: 15%;
+}
+.ser_frnd_btn{
+  margin-left: 5%;
+  width: 10%;
+}
 @media only screen and (max-width: 600px) {
   .home_padLogo{
     padding-left: 3%;
@@ -447,9 +457,11 @@ th,td{
   }
   .journey_head{
     padding: 0px 3% 0px 3%;
+    margin-top: 5%;
   }
   .profile_desc,.profile_textarea,.profile_Accom_dropDown,.profile_arrival{
     width: 100%;
+    margin-top: 1%;
   }
   .profile_update_btn{
     width: 70%;
@@ -470,12 +482,37 @@ th,td{
     margin-left: 0px;
   }
   .home_carosal_desc{
-    font-size: 40px;
-    bottom: 36%;
+    font-size: 23px;
+    bottom: 38%;
   }
   .home_carosal_desc1{
-    font-size: 40px;
+    font-size: 25px;
     bottom: 70%;
+  }
+  .crsl-heigt {
+    height: 30vh !important;
+  }
+  .ticktop{
+    padding-top: 15px;
+  }
+  .school_desc{
+    padding: 5% 5%;
+  }
+  .searchfriend{
+    padding-top: 30%;
+  }
+  .gallery_search_design {
+    margin-left: 5%;
+    width: 85%;
+    border-radius: 2px;
+    border: 1px solid;
+    padding: 6px;
+    margin-top: 5%;
+  }
+  .ser_frnd_btn{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 40%;
   }
 }
 

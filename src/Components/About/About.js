@@ -233,6 +233,7 @@ export default class About extends Component{
         <p className="text">The suggested minimum contribution in Rupees per alumni is detailed below. The relatively younger ones amongst have a lower suggested contribution. </p>
         <p className="text">All of you are welcome to contribute more than the minimum suggested amounts below.</p>
         <table>
+            <tbody>
             <tr>
                 <td>Alumni who passed X standard (in KVK or otherwise) in the year 2005 or earlier</td>
                 <td>6250</td>
@@ -245,6 +246,7 @@ export default class About extends Component{
                 <td>Spouse of Alumni</td>
                 <td>3750</td>
             </tr>
+            </tbody>
         </table>
 
         <p className="text">The additional contribution from you will go towards higher budgetary outlay for Teacher souvenirs, taking care of travel and stay for some teachers if there is a need, better outlay for venue, entertainment and event management and such aspects that will make the day more special and memorable.</p>

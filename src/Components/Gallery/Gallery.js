@@ -18,7 +18,7 @@ class Gallery extends Component{
         return(
             <div style={{width:"100%"}}>
                 <Header/>
-                    <div className="container" style={{paddingTop:"3%",paddingBottom:"3%"}}>
+                    <div className="container searchfriend" style={{paddingBottom:"3%"}}>
                         <div className="row">
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1992</p>

@@ -218,7 +218,7 @@ class Profile extends Component{
             if(this.state.album_imgs.length > 0){
                 renderALbum = this.state.album_imgs.map((image,index) => {
                     return(
-                        <div className="col-sm-4 col-lg-4" style={{width:"20%"}} >
+                        <div className="col-sm-4 col-lg-4 col-xs-12" style={{paddingRight:"10%"}} >
                             <img src={image} style={{width:"100%",height:"120px"}} />
                         </div>
                     )
@@ -292,7 +292,7 @@ class Profile extends Component{
                 <div className="row" style={{width:"72%"}}>
                     <div className="col-sm-4 col-lg-4">
                         <span>Would like to attend the event?</span><br/><br/>
-                        <input type="radio" name="group1" value="attending" checked/> <span style={{paddingLeft:"5%"}} >Attending</span><br/>
+                        <input type="radio" name="group1" value="attending" defaultChecked /> <span style={{paddingLeft:"5%"}} >Attending</span><br/>
                         <input type="radio" name="group1" value="notAttending"/> <span style={{paddingLeft:"5%"}}>Not Attending</span><br/>
                         <input type="radio" name="group1" value="notDecided"/> <span style={{paddingLeft:"5%"}}>Not Decided</span>
                     </div>
@@ -318,13 +318,13 @@ class Profile extends Component{
                         <p className="profile_Accom">My Contribution (in rupees)</p>
                         <p style={{fontSize:"16px",letterSpacing:"1px"}}>Suggested amount is Rs10,000 for indivuduals and Rs13,000 for alumini with families</p>
                         <p style={{fontSize:"16px",letterSpacing:"1px"}}>If you are an overseas alumini, please convert your contribution to equivalent amount in Indian Rupees.</p>
-                        <input id="updconamt" className="profile_Accom_dropDown profile_amts" type="text" placeholder="15000.00" />
+                        <input id="updconamt" className="profile_Accom_dropDown profile_amts" type="text" placeholder="Eg: 15000.00" />
                         <p className="profile_Accom">Payment Date:</p>
                         <input id="updpaydate" className="profile_Accom_dropDown profile_amts" type="date" name="paymentDate" />
                         <p className="profile_Accom">Paid Via</p>
-                        <input id="updpaidvia" className="profile_Accom_dropDown profile_amts" type="text" placeholder="NEFT" />
+                        <input id="updpaidvia" className="profile_Accom_dropDown profile_amts" type="text" placeholder="Eg:NEFT" />
                         <p className="profile_Accom">Confirmation Code</p>
-                        <input id="updconfmcode" className="profile_Accom_dropDown profile_amts" type="text" placeholder="N256160186654768 N256160186728582" />
+                        <input id="updconfmcode" className="profile_Accom_dropDown profile_amts" type="text" placeholder="Eg: N256160186654768 N256160186728582" />
                         <br/><br/>
                         <button type="button" className="profile_update_btn" onClick={this.updateValues.bind(this)}>Update</button>
                 </div>

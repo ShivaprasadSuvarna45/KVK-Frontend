@@ -72,7 +72,7 @@ class Home extends Component{
             return(              
                     <div style={{position:"relative"}}>
                         <div style={{width:"250px",height:"250px",position:"relative"}}>
-                          <img style={{width:"100%",height:"100%",borderRadius:"5px"}} src={ele.album_img}/>
+                          <img style={{width:"100%",height:"100%",borderRadius:"5px"}}  src={ele.album_img}/>
                           <img src={ele.profile_photo} style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
                         </div>
                     </div>
@@ -84,6 +84,7 @@ class Home extends Component{
         this.render_table = <div className="home_prg_divv">
                                 <p className="home_prg_pp">PROGRAM</p>
                                 <table id="home_prg_tbl">
+                                  <tbody>
                                   <tr>
                                     <td className="home_tbl_dtls" style={{width:"17%"}}>8:30 AM to 10:30 AM</td>
                                     <td className="home_tbl_dtls" style={{width:"64%"}}>
@@ -155,7 +156,7 @@ class Home extends Component{
                                       <p>Amidst goodbyes and promises to meet again, until the next time…. <i>Kabhi Alvida Na Kehna</i></p>
                                     </td>
                                   </tr>
-                                  
+                                  </tbody>
                                 </table>
                                 <i>Above is an Indicative Program; May change depending on availability of resources;</i>
                              </div>
@@ -239,33 +240,33 @@ class Home extends Component{
 
         <div className="container-fluid">
             <div className="row" style={{backgroundColor:"#00a756",paddingTop:"15px",paddingBottom:"13px"}}>
-              <div className="col-xs-7 col-sm-7" style={{textAlign:"center"}}>
+              <div className="col-xs-12 col-sm-7 col-lg-7" style={{textAlign:"center"}}>
                   <div>
                     <span className="rewindFont">Rewind Reunite Relive</span><br/>
                     <span className="countdownFont">The count down has begun. Scroll down to see the details!</span>
                   </div>
               </div>
-              <div className="col-xs-5 col-sm-5">
+              <div className="col-xs-12 col-sm-5 col-lg-5 ticktop">
                   <div className="row">
-                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span id="days" className="home_countdown_letter"></span>
                           </div>
                           <span className="home_days">DAYS</span>
                       </div>
-                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span id="hours" className="home_countdown_letter"></span>
                           </div>
                           <span className="home_days">HOURS</span>
                           </div>
-                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span id="minutes" className="home_countdown_letter"></span>
                           </div>
                           <span className="home_days">MINUTES</span>
                       </div>
-                      <div className="col-xs-6 col-sm-3 col-lg-3 home_align_col_center">
+                      <div className="col-xs-3 col-sm-3 col-lg-3 home_align_col_center">
                           <div className="home_countdown_block">
                               <span id="seconds" className="home_countdown_letter">45</span>
                           </div>
@@ -278,7 +279,7 @@ class Home extends Component{
         <div className="container-fluid">
     
             <div className="row">
-                <div className="col-sm-12 col-lg-12 col-xs-12" style={{padding: "5% 15%"}}>
+                <div className="col-sm-12 col-lg-12 col-xs-12 school_desc">
                     
                     <p className="home_description">No one in this world is rich enough to buy his own childhood and youth back. Only old friends help to recreate those moments from time to time.</p>
                     <p className="home_description">And to do this - The first grand reunion of all of us who went to study in Kendriya Vidyalaya Kudremukh is happening on August 11th 2018 at Bengaluru – for you to Relive the years spent at the school and Kudremukh in a one day time-lapse, if you will.</p>
@@ -294,9 +295,7 @@ class Home extends Component{
                   </Slider>
         </div>
 
-        <div className="home_want_to_see">
-          <Link className="home_want_to_see" to={{ pathname: "/Gallery", state: { gotToSearch: true} }}>Want to see who is coming....?</Link>
-        </div>
+        
         {this.render_table}
       </div>
     )
