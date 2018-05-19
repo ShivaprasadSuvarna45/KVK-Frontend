@@ -300,7 +300,7 @@ class Profile extends Component{
                         <span>Meal Preference</span><br/>
                         <select id="updmeal" className="profile_Accom_dropDown">
                             <option value="vegetarian">Vegetarian</option>
-                            <option value="nonvegetarian">Non Vegetarian</option>
+                            <option value="nonvegetarian">Non-Vegetarian</option>
                         </select><br/><br/>
                         <span>Coming with Spouse?</span><br/>
                         <select id="updspouse" className="profile_arrival">
