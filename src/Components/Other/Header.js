@@ -63,7 +63,7 @@ class Header extends Component{
 		API_UTIL.registerUser(regVals);
 	}
 	_regOpen(){
-		console.log("Hi");
+		//console.log("Hi");
 	}
 	changeRegisterState(){
 		store.dispatch({type:"CHANGE_REG_STATE"});

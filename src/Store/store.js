@@ -22,7 +22,7 @@ if(process.env.NODE_ENV=="production")
 }
 else{
     // logger adds REDUX event logs to console
-    store=createStore(reducer,applyMiddleware(logger));
+    store=createStore(reducer);
         //sagaMiddleware.run(indexSaga);
         store.dispatch(AvatarAction());
         //store.dispatch(InterestAction())

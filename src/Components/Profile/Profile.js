@@ -26,13 +26,13 @@ class Profile extends Component{
         this.setAllValues = this.setAllValues.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount(){    
         cloudinary.config({ 
             cloud_name: 'doifpsy95', 
             api_key: '512551122167763', 
             api_secret: 'z-o3BS3F8VtbViNk8U9KO7lGIHo' 
         });
-        console.log(this.props.userDetails);
+        //console.log(this.props.userDetails);
         if(this.props.userDetails.username){
             this.setAllValues();
         }
@@ -86,7 +86,7 @@ class Profile extends Component{
 
     previewProfileImage( uploader ) {   
         let _that = this;
-        console.log(document.getElementById("profile_id").files[0]);
+        //console.log(document.getElementById("profile_id").files[0]);
         let imageFile = document.getElementById("profile_id").files[0];
         var oFReader = new FileReader();
         oFReader.readAsDataURL(imageFile);
@@ -127,7 +127,7 @@ class Profile extends Component{
         formData.append('file', imageFile);
         cloudinary.uploader.upload(imageFile, function(result) { 
             //_that.setState({default_src:result.secure_url});
-            console.log(result);
+            //console.log(result);
             _that.setState({loading:false});
             if(result.error){
                 if(result.error.http_code == 400){
@@ -145,7 +145,7 @@ class Profile extends Component{
 
     previewAlbumImage( uploader ) {   
         let _that = this;
-        console.log(document.getElementById("album_id").files[0]);
+        //console.log(document.getElementById("album_id").files[0]);
         let imageFile = document.getElementById("album_id").files[0];
         var oFReader = new FileReader();
         oFReader.readAsDataURL(imageFile);
@@ -206,13 +206,16 @@ class Profile extends Component{
             document.getElementById("updconfmcode").value = this.props.userDetails.confirmation_code;
         }
         if(this.props.userDetails.payment_date){
-            document.getElementById("updpaydate").value = this.props.userDetails.payment_date; 
+            var now = new Date(this.props.userDetails.payment_date);
+            var day = ("0" + now.getDate()).slice(-2);
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        
+            var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+            document.getElementById("updpaydate").value = today;  
         }
     }
 
     render(){
-
-        console.log("Hi    " +this.state.album_imgs);
         var renderALbum = <div></div>
         if(this.state.album_imgs){
             if(this.state.album_imgs.length > 0){
