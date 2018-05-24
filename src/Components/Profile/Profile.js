@@ -274,7 +274,7 @@ class Profile extends Component{
                     </div>
                     <div className="col-sm-8 col-lg-8" style={{textAlign:"left",marginTop:"25px"}}>
                             <input id="updname" className="profile_inputs" type="text" placeholder="Name" /><br/><br/><br/>
-                            <input id="updbranch" className="profile_inputs" type="text" placeholder="Batch"/><br/><br/><br/>
+                            <input id="updbranch" className="profile_inputs" type="text" placeholder="Your Batch – X pass year"/><br/><br/><br/>
                             <input id="updcity" className="profile_inputs" type="text" placeholder="Location"/><br/><br/><br/>
                             <input id="updcountry" className="profile_inputs" type="text" placeholder="country"/><br/><br/><br/>
                     </div>
@@ -288,8 +288,8 @@ class Profile extends Component{
             </div>
 
             <div className="journey_head">
-                <p className="profile_desc">Journey Since Graduation</p><br/>
-                <p className="profile_desc">Describe your life after KREC - what you have been doing professionally and personally in the subsequent 25 years. This will go into the E-book that will be given to each alumni. Feel free to elaborate, it works best if it is limited to about half a page (A4) or less.</p>
+                <p className="profile_desc">Your Journey since KVK</p><br/>
+                <p className="profile_desc">Describe your journey since KVK in short – your graduation, post-graduation, the work you have been doing and about your family. Fellow alumni would love to know more of your story after KVK.</p>
                 <br/>
                 <textarea id="upddesc" className="profile_textarea"></textarea><br/><br/>
                 <div className="row" style={{width:"72%"}}>
@@ -318,9 +318,10 @@ class Profile extends Component{
                 </div>
 
                 <div style={{marginTop:"40px"}}>
-                        <p className="profile_Accom">My Contribution (in rupees)</p>
-                        <p style={{fontSize:"16px",letterSpacing:"1px"}}>Suggested amount is Rs10,000 for indivuduals and Rs13,000 for alumini with families</p>
-                        <p style={{fontSize:"16px",letterSpacing:"1px"}}>If you are an overseas alumini, please convert your contribution to equivalent amount in Indian Rupees.</p>
+                        <p className="profile_Accom">My contribution (in Rupees)</p>
+                        <p style={{fontSize:"16px",letterSpacing:"1px"}}>Minimum suggested Contribution is Rs. 6250/- if you are 2005 batch and earlier, Rs. 4250/- if you are 2006 batch and later and Rs. 3750 additional if you are bringing your spouse.</p>
+                        <p style={{fontSize:"16px",letterSpacing:"1px"}}>You are welcome to contribute more than the Minimum suggested contribution.</p>
+                        <p style={{fontSize:"16px",letterSpacing:"1px"}}>If you are an overseas alumni please convert your contribution to equivalent amount in Indian rupees.</p>
                         <input id="updconamt" className="profile_Accom_dropDown profile_amts" type="text" placeholder="Eg: 15000.00" />
                         <p className="profile_Accom">Payment Date:</p>
                         <input id="updpaydate" className="profile_Accom_dropDown profile_amts" type="date" name="paymentDate" />

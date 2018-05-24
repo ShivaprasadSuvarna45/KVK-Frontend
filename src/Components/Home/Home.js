@@ -242,7 +242,7 @@ class Home extends Component{
             <div className="row" style={{backgroundColor:"#00a756",paddingTop:"15px",paddingBottom:"13px"}}>
               <div className="col-xs-12 col-sm-7 col-lg-7" style={{textAlign:"center"}}>
                   <div>
-                    <span className="rewindFont">Rewind Reunite Relive</span><br/>
+                    <span className="rewindFont">Chota School Bada Reunion - Be Like Then</span><br/>
                     <span className="countdownFont">The count down has begun. Scroll down to see the details!</span>
                   </div>
               </div>

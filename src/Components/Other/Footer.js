@@ -5,6 +5,11 @@ export default class Footer extends Component{
 
 	constructor(props){
 		super(props)
+		this.openFB = this.openFB.bind(this);
+	}
+
+	openFB(){
+		window.open('https://www.facebook.com/Kendriya-Vidyalaya-Kudremukh-309258902933509/', "_blank");
 	}
 
 	render(){
@@ -18,12 +23,12 @@ export default class Footer extends Component{
 									<br/>
 									<span className="footer_desc">can be reached at</span>
 									<br/>
-									<span className="footer_desc">KVK.info@.com</span>
+									<span className="footer_desc">kvk.reu@gmail.com</span>
 							  </div>
 							</div>
-							<div className="col-sm-7 col-lg-7 visit_fb">
-									<p className="footer_head">VISIT KVK PAGE ON FACEBOOK</p>
-									<i className="fab fa-facebook-square footer_fbIcon"></i>
+							<div className="col-sm-7 col-lg-7 visit_fb" onClick={this.openFB.bind(this)}>
+									<p className="footer_head" style={{cursor:"pointer"}}>VISIT KVK PAGE ON FACEBOOK</p>
+									<i className="fab fa-facebook-square footer_fbIcon" style={{cursor:"pointer"}}></i>
 							</div>
 					</div>
 			</div>

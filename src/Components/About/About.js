@@ -48,6 +48,10 @@ export default class About extends Component{
                     <td style={{padding:"15px"}}>1997</td>
                 </tr>
                 <tr>
+                    <td style={{padding:"15px"}}>Pradeep M</td>
+                    <td style={{padding:"15px"}}>1997</td>
+                </tr>
+                <tr>
                     <td style={{padding:"15px"}}>Naga Mohan</td>
                     <td style={{padding:"15px"}}>1996</td>
                 </tr>
@@ -223,7 +227,7 @@ export default class About extends Component{
             <tr>
                 <td></td>
                 <td>Total</td>
-                <td>13.75L</td>
+                <td>13.5L</td>
             </tr>
             </tbody>
         </table>
@@ -231,7 +235,7 @@ export default class About extends Component{
         <p className="text">To work out the suggested minimum contribution per alumni we have worked on the assumption that about 200 alumni, 35 spouses and 25 teachers will be attending.</p>
 
         <p className="text">The suggested minimum contribution in Rupees per alumni is detailed below. The relatively younger ones amongst have a lower suggested contribution. </p>
-        <p className="text">All of you are welcome to contribute more than the minimum suggested amounts below.</p>
+        
         <table>
             <tbody>
             <tr>
@@ -249,16 +253,18 @@ export default class About extends Component{
             </tbody>
         </table>
 
-        <p className="text">The additional contribution from you will go towards higher budgetary outlay for Teacher souvenirs, taking care of travel and stay for some teachers if there is a need, better outlay for venue, entertainment and event management and such aspects that will make the day more special and memorable.</p>
-        <p className="text">Those alumni who wish to attend but have genuine difficulty in meeting the minimum suggested contribution can reach out to us. We will try and work out to the extent possible.</p>
+        <p className="text">At the above numbers we will be 78K short of 13.5L estimate.</p>
+        <p className="text">All of you are welcome to contribute more than the minimum suggested amounts indicated.</p>
+        <p className="text">The additional contribution from you will help bridge in case there is a shortfall in the number of attendees from the estimated 200.</p>
+        <p className="text">If 200 of you confirm then the additional contribution will go towards higher budgetary outlay for Teacher souvenirs, taking care of travel and stay for outstation teachers if there is a need as we currently have no outlay on this, better outlay for venue, entertainment and event management and such aspects that will make the day more special and memorable.</p>
+        <p className="text">In case a much larger number than 200 of you decide to attend and we have significantly higher collections compared to the expenses then we may do either one or all of the following depending on the surplus available: 1) Work out a refund proportionate to contribution made 2) Donate to a registered charity on behalf of KVK alumni</p>
         <p className="text">Please note that the above expenses do not include alcoholic drinks or non-alcoholic beverages. Drink coupons will be available separately at the venue. We will be working with the venue on an optimal way to make these available.</p>
 
-        <p className="subtext">Payments and Payment Updates</p>
-        <p className="text">Account details will be updated here soon after the bank account is opened. You can then make your payments.</p>
-        <p className="text">Please make your payments by 31st of May 2018 – the last day for booking your place at the reunion by making payments. </p>
+        <p className="subtext">Payment Window and Payments</p>
+        <p className="text">The Payment window will be announced once the bank account is ready.</p>
         <p className="text">You need to pay using NEFT/UPI to the bank details mentioned above and update the payment reference numbers in your “Profile”. We are not using a payment gateway to save on payment gateway charges which can be used for reunion purposes.</p>
+        <p className="text">We estimate that the payments need to be made in the 1st to 2nd week of June, which gives the organising group just under 7 weeks to start the work towards booking of venues and all other related activity for the event.</p>
         <p className="text">We will be verifying the payment reference details submitted by you with the bank statements and publishing the “Payment Received List” on a regular basis.</p>
-        <p className="text">We urge you to complete your payment early and not wait till the end. The earlier we receive 200 confirmed alumni payments we can start the work towards booking of venues and all other related activity. We have just two months to complete all the tasks required for August 11th 2018 – and every extra day matters.</p>
 
       </div>
       <Footer/>

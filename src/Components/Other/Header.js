@@ -50,7 +50,8 @@ class Header extends Component{
 
 	_submitAllData(){
 		let regVals = {	};
-		regVals.email = document.getElementById("regemail").value.trim();
+		let myreg = document.getElementById("regemail").value.trim();
+		regVals.email = myreg.toLowerCase();
 		regVals.batch = document.getElementById("regbatch").value.trim();
 		regVals.name = document.getElementById("regname").value.trim();
 		regVals.phone = document.getElementById("regphone").value.trim();
@@ -59,7 +60,8 @@ class Header extends Component{
 
 	_submitmail(){
 		let regVals = {	};
-		regVals.email = document.getElementById("regemail1").value.trim();
+		let myreg = document.getElementById("regemail1").value.trim();
+		regVals.email = myreg.toLowerCase();
 		API_UTIL.registerUser(regVals);
 	}
 	_regOpen(){
@@ -76,7 +78,8 @@ class Header extends Component{
 	_login(){
 		let loginCred = {};		
 		//this.setState({islogin:true});
-		loginCred.email = document.getElementById("loginemail").value.trim();
+		let shdlwrcase = document.getElementById("loginemail").value.trim();
+		loginCred.email = shdlwrcase.toLowerCase();
 		loginCred.password = document.getElementById("loginpassword").value.trim();
 		API_UTIL.loginUser(loginCred);
 	}
@@ -135,7 +138,7 @@ class Header extends Component{
 										<span className="modal-title modal1_head">Enter your Email ID to Register</span><br/><br/>
 										<input id="regemail" type="email" placeholder="Enter email id" className="modal1_inputemail" /><br/><br/>
 										<span className="modal-title modal1_head" >Enter your Batch</span><br/><br/>
-										<input id="regbatch" type="text" placeholder="passed out year" className="modal1_inputemail"/><br/><br/>
+										<input id="regbatch" type="text" placeholder="Your Batch – X pass year" className="modal1_inputemail"/><br/><br/>
 										<span className="modal-title modal1_head" >Enter your Name</span><br/><br/>
 										<input id="regname" type="text" placeholder="Enter Name" className="modal1_inputemail"/><br/><br/>
 										<span className="modal-title modal1_head" >Enter your Phone number</span><br/><br/>
