@@ -113,11 +113,13 @@ class Api{
             axios.get(KVKURL+'/getalldetails')
             .then(function(res){
                   for(let i=0;i<res.data.length; i++){
-                        for(let j=0; j< res.data[i].album_imgs.length; j++){
-                              albm_pf.push({profile_photo:res.data[i].profile_photo,album_img:res.data[i].album_imgs[j]});
-                        }
+                        if(res.data[i].album_imgs){
+                              for(let j=0; j< res.data[i].album_imgs.length; j++){
+                                    albm_pf.push({profile_photo:res.data[i].profile_photo,album_img:res.data[i].album_imgs[j]});
+                              }
+                        }                        
                   }
-                  console.log(albm_pf);
+                  //console.log(albm_pf);
                   store.dispatch({type:"SET_SLICK",payload:albm_pf});
             })
             .catch(function(error){

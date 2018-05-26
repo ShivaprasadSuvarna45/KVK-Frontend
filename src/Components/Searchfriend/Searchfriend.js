@@ -63,11 +63,13 @@ class Searchfriend extends Component{
         var renderImages = <div></div>
         if(this.props.img_links.length>0){
             renderImages = this.props.img_links.map((element,index) => {
-                return(
-                    <div className="col-sm-3 col-lg-3 col-xs-12">
-                        <img src={element.profile_photo} style={{width:"100%",height:"150px",cursor:"pointer"}} data-toggle="modal" data-target="#descModal" onClick={this.renderInfo.bind(this,element)}/>
-                    </div>
-                )
+                if(element.profile_photo){
+                    return(
+                        <div className="col-sm-3 col-lg-3 col-xs-12">
+                            <img src={element.profile_photo} style={{width:"100%",height:"150px",cursor:"pointer"}} data-toggle="modal" data-target="#descModal" onClick={this.renderInfo.bind(this,element)}/>
+                        </div>
+                    )
+                }
             });
         }
         return(

@@ -522,9 +522,9 @@ th,td{
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
-  border-color: #fff;
+  border-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
   background-color: #333;
-  border-color: none;
+  border-color: none !important;
 }

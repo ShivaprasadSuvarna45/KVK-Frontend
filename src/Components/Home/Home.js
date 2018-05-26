@@ -22,51 +22,40 @@ class Home extends Component{
     API_UTIL.getAllRecords();
     let _that = this;
 
-    var timer;
-    
-    var compareDate = new Date();
-    var date2  = new Date(2018, 7, 11);
-    var timeDiff = Math.abs(date2.getTime() - compareDate.getTime());
-    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-    compareDate.setDate(compareDate.getDate() + diffDays);
-    
-    timer = setInterval(function() {
-      _that.timeBetweenDates(compareDate);
-    }, 1000);
-  }
-  
-  timeBetweenDates(toDate) {
-    var dateEntered = toDate;
-    var now = new Date();
-    var difference = dateEntered.getTime() - now.getTime();
-  
-    if (difference <= 0) {
-  
-      // Timer done
-      clearInterval(timer);
-    
-    } else {
+    var countDownDate = new Date("Aug 11, 2018 13:30:00").getTime();
+    var x = setInterval(function() {
       
-      var seconds = Math.floor(difference / 1000);
-      var minutes = Math.floor(seconds / 60);
-      var hours = Math.floor(minutes / 60);
-      var days = Math.floor(hours / 24);
-  
-      hours %= 24;
-      minutes %= 60;
-      seconds %= 60;
-  
-      $("#days").text(days);
-      $("#hours").text(hours);
-      $("#minutes").text(minutes);
-      $("#seconds").text(seconds);
-    }
+          // Get todays date and time
+          var now = new Date().getTime();
+          
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+          
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          // Output the result in an element with id="demo"
+          //document.getElementById("demo").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+          $("#days").text(days);
+          $("#hours").text(hours);
+          $("#minutes").text(minutes);
+          $("#seconds").text(seconds);
+          // If the count down is over, write some text 
+          if (distance < 0) {
+              clearInterval(x);
+              //document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+      }, 1000);
   }
 
 	render(){
 
     this.render_slick = <div></div>
     this.render_table = <div></div>
+    console.log(this.props.album_profile);
     if(this.props.album_profile.length > 3){
           this.render_slick = this.props.album_profile.map((ele,index) => {
             return(              

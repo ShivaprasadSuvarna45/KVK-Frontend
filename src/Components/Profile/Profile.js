@@ -76,7 +76,7 @@ class Profile extends Component{
         updVal.confirmation_code = document.getElementById("updconfmcode").value.trim();      
         updVal.payment_date = document.getElementById("updpaydate").value;      
         updVal.album_imgs = this.state.album_imgs;
-        
+        window.scrollTo(0, 0);
         API_UTIL.updateDetails(updVal);
     }
     
