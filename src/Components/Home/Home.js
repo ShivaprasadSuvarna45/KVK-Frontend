@@ -60,7 +60,7 @@ class Home extends Component{
           this.render_slick = this.props.album_profile.map((ele,index) => {
             return(              
                     <div style={{position:"relative"}}>
-                        <div style={{width:"250px",height:"250px",position:"relative"}}>
+                        <div className="hme_mvng">
                           <img style={{width:"100%",height:"100%",borderRadius:"5px"}}  src={ele.album_img}/>
                           <img src={ele.profile_photo} style={{width:"50px",height:"50px",position:"absolute",right:"6px",bottom:"3%",borderRadius:"50%"}} />
                         </div>
