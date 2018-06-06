@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Mr+Dafoe|Tangerine&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
 body,html{
@@ -113,20 +114,21 @@ body,html{
 .home_carosal_desc{
   position: absolute;
   font-size: 50px;
-  font-weight: 900;
   bottom: 60%;
   color: #fff; // rgb(12, 204, 207);
   width: 100%;
   text-align: center;
+  font-family: 'Great Vibes', cursive;
 }
 .home_carosal_desc1{
   position: absolute;
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 60px;
   bottom: 75%;
   color: #fff; // rgb(12, 204, 207);
   width: 100%;
   text-align: center;
+  font-family: 'Tangerine', cursive;
+  font-weight: bold;
 }
 .home_want_to_see{
   padding-top: 1%;

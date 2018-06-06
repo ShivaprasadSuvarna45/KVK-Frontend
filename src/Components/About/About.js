@@ -27,6 +27,8 @@ export default class About extends Component{
 
         <p className="subtext">Governance</p>
 
+        <p className="text">We have formed an “Association of Persons” titled “KV Kudremukh Alumni Association” with the organising alumni as the authorised signatories (any two jointly) to sign agreements, operate the bank accounts, appoint event managers, agencies, auditors etc. We will have audited financials and will file a tax return for the Financial Year 2018-19 based on the contributions received from all of you and expenses actually incurred. Any alumni wishing to see the audited financials, after the event is completed, may contact the organising group.</p>
+
         <p className="text">This event is being planned and organised by volunteers from various batches.</p>
 
         <p className="text">The following have taken up several planning and on-the-ground organising responsibilities for the reunion:</p>
@@ -261,10 +263,20 @@ export default class About extends Component{
         <p className="text">Please note that the above expenses do not include alcoholic drinks or non-alcoholic beverages. Drink coupons will be available separately at the venue. We will be working with the venue on an optimal way to make these available.</p>
 
         <p className="subtext">Payment Window and Payments</p>
-        <p className="text">The Payment window will be announced once the bank account is ready.</p>
-        <p className="text">You need to pay using NEFT/UPI to the bank details mentioned above and update the payment reference numbers in your “Profile”. We are not using a payment gateway to save on payment gateway charges which can be used for reunion purposes.</p>
-        <p className="text">We estimate that the payments need to be made in the 1st to 2nd week of June, which gives the organising group just under 7 weeks to start the work towards booking of venues and all other related activity for the event.</p>
+
+        <p className="text" style={{textDecoration: "underline"}}><b>Bank Account Details:</b></p>
+        <p className="text">Name: KV Kudremukh Alumni Association</p>
+        <p className="text">IFSC Code: BKID0008496</p>
+        <p className="text">Account Number(Savings Account): 849610110011090</p>
+        <p className="text">Branch Address: Bank of India, Jeevan Bhima Nagar Branch, Bangalore 560 075</p>
+        
+        <p className="text" style={{textDecoration: "underline"}}><b>Payment Method:</b></p>
+        <p className="text">If you are a resident Indian you can pay using NEFT/UPI to the bank details mentioned above and update the payment reference numbers in your “Profile” in the reunion website.</p>
+        <p className="text">If you are using International Wire then the SWIFT code for the bank is BKIDINBBBGL</p>
+        <p className="text">We are not using a payment gateway to save on payment gateway charges which can be used for reunion purposes.</p>
+        <p className="text">We estimate that the payments need to be made by the 3rd week of June, which gives the organising group just under 7 weeks to start the work towards booking of venues and all other related activity for the event.</p>
         <p className="text">We will be verifying the payment reference details submitted by you with the bank statements and publishing the “Payment Received List” on a regular basis.</p>
+        <p className="text">We urge you to complete your payment early and not wait till the end. The earlier we receive 200 confirmed alumni payments we can start the work towards booking of venues and all other related activity. We have just two months to complete all the tasks required for August 11th 2018 – and every extra day matters.</p>
 
       </div>
       <Footer/>

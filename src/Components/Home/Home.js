@@ -151,12 +151,12 @@ class Home extends Component{
                              </div>
     }
     else{
-          this.render_table = <div className="home_prg_divv">
+          this.render_table = <div className="home_prg_divv">                                  
                                   <p className="subtext">How do I register at this website for a login?</p>
-                                  <p className="text">If you have not enrolled yourself into the KVK database enrolment form we have been circulating since January 2018, then you need to register giving the details about yourself, the year you passed your X (whether in KVK or elsewhere as we are using X pass as the reference year), your email address. </p>
-                                  <p className="text">The details you entered will be verified and post verification (It will take 3-4 days) you will receive a OTP in your registered email to login to the website.</p>
                                   <p className="text">If you have already enrolled yourself into the KVK database, then you do not need to register. We have your details. Just enter the email address you gave at the time of enrolment and you will receive the login and password in your mailbox.</p>
-                              </div>
+                                  <p className="text">If you have not enrolled yourself into the KVK database enrolment form we have been circulating since January 2018, then uncheck the "For Enrolled User" check-box and register giving the details about yourself, the year you passed your X (whether in KVK or elsewhere as we are using X pass as the reference year), your email address and phone number.</p>
+                                  <p className="text">The details you entered will be verified and post verification (It will take 3-4 days) you will receive a OTP in your registered email to login to the website.</p>
+                             </div>
     }
 
 		var settings = {
@@ -185,32 +185,32 @@ class Home extends Component{
 
                   <div className="carousel-inner crsl-heigt">
                       <div className="item active crsl-heigt">
-                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
-                        <p className="home_carosal_desc">Where we learnt the alphabet of language</p>
+                        <p className="home_carosal_desc1">Kendriya Vidyalaya Kudremukh</p>
+                        <p className="home_carosal_desc">Where we learnt the alphabet of language...</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335249/Picture1.png" alt="KVK1" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
-                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
-                        <p className="home_carosal_desc">And the Math for Life</p>
+                        <p className="home_carosal_desc1">Kendriya Vidyalaya Kudremukh</p>
+                        <p className="home_carosal_desc">...And the Math for Life.</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335393/Picture2.png" alt="KVK2" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
                       <div className="item crsl-heigt">
-                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p> 
-                        <p className="home_carosal_desc">Played as if there was no morrow</p>
+                        <p className="home_carosal_desc1">Kendriya Vidyalaya Kudremukh</p> 
+                        <p className="home_carosal_desc">Where we played as if there was no morrow...</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335499/Picture3.png" alt="KVK3" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
-                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
-                        <p className="home_carosal_desc">Grew amidst the bounties of nature</p>
+                        <p className="home_carosal_desc1">Kendriya Vidyalaya Kudremukh</p>
+                        <p className="home_carosal_desc">Grew amidst the bounties of nature...</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335624/Picture4.png" alt="KVK4" style={{width:"100%"}} className="crsl-heigt" />
                       </div>
 
 											<div className="item crsl-heigt">
-                        <p className="home_carosal_desc1">kendriya vidyalaya kudremukh</p>
-                        <p className="home_carosal_desc">And made lifelong friends</p>
+                        <p className="home_carosal_desc1">Kendriya Vidyalaya Kudremukh</p>
+                        <p className="home_carosal_desc">... And made lifelong friends</p>
                         <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1525335688/Picture5.png" alt="KVK5" style={{width:"100%"}} className="crsl-heigt"/>
                       </div>
                   </div>
