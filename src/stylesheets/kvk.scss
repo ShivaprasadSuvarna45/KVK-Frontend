@@ -141,10 +141,10 @@ body,html{
 }
 .home_prg_divv{
   background-color: #fff;
-  padding-left: 7%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10%;
+  padding-bottom: 3%;
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .home_prg_pp{
   font-size: 20px;
@@ -454,6 +454,9 @@ th,td{
     padding-left: 2.5%;
     padding-top: 3%;
     font-size: 25px;
+  }
+  .home_prg_divv{
+    padding: 5% 5%;
   }
   .chng_pwd_btn{
     width: 170px;
