@@ -24,7 +24,6 @@ class Searchfriend extends Component{
     }
 
     renderInfo(element){
-        //console.log(element);
         this.setState({profile_photo:element.profile_photo});
         this.setState({name:element.username});
         this.setState({batch:element.batch});

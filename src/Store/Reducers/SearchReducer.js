@@ -4,13 +4,13 @@ export function SearchReducer(state={img_links: [],album_profile: []},
     {
          case "SEARCH_RESULT":
          {
-                console.log(action.payload);
+                
                 return {...state,img_links:action.payload}   
                 break;           
          }
          case "SET_SLICK":
          {
-                console.log(action.payload);
+                //console.log(action.payload);
                 return {...state,album_profile:action.payload}   
                 break;           
          }

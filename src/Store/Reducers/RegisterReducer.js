@@ -6,7 +6,7 @@ export function RegisterReducer(state={isregisterd: false,regMsg:''},
     {
          case "REGISTER_USER":
          {
-                console.log(action.payload);
+                //console.log(action.payload);
                 if(action.payload === "registered"){
                     return {...state,isregisterd:true,regMsg:"Thanks for registering. You will receive an email with user ID and Password"}
                 }
@@ -19,7 +19,7 @@ export function RegisterReducer(state={isregisterd: false,regMsg:''},
          }
          case "REGISTER_NEW_USER":
          {
-                console.log(action.payload);
+                //console.log(action.payload);
                 if(action.payload === "registered"){
                     return {...state,isregisterd:true,regMsg:"Thanks for registering. Your details will be varified by the administrator"}
                 }

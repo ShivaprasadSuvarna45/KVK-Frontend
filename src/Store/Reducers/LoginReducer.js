@@ -7,7 +7,7 @@ export function LoginReducer(state={userDetails: {},islogin:false},action){
                 return {...state,userDetails:action.payload.res.data,islogin:true}
              }
              else if(action.payload.msg === "failure"){
-                console.log(action.payload.error);
+                //console.log(action.payload.error);
                 alert("Connection error, Please try again");
                 return {...state,userDetails:{},islogin:false}
              }
