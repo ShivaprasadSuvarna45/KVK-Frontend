@@ -15,7 +15,7 @@ class Searchfriend extends Component{
         this.state = {
             name : "",
             batch : "",
-            email : "",
+            description : "",
             profile_photo : "",
             profession : ""
         }
@@ -24,11 +24,11 @@ class Searchfriend extends Component{
     }
 
     renderInfo(element){
-        console.log(element);
+        //console.log(element);
         this.setState({profile_photo:element.profile_photo});
         this.setState({name:element.username});
         this.setState({batch:element.batch});
-        this.setState({email:element.email});
+        this.setState({description:element.description});
         this.setState({profession:element.profession});
     }
 
@@ -65,8 +65,8 @@ class Searchfriend extends Component{
             renderImages = this.props.img_links.map((element,index) => {
                 if(element.profile_photo){
                     return(
-                        <div className="col-sm-3 col-lg-3 col-xs-12">
-                            <img src={element.profile_photo} style={{width:"100%",height:"150px",cursor:"pointer"}} data-toggle="modal" data-target="#descModal" onClick={this.renderInfo.bind(this,element)}/>
+                        <div className="col-sm-3 col-lg-3 col-xs-12" style={{marginTop:"2%"}}>
+                            <img src={element.profile_photo} style={{width:"100%",height:"175px",cursor:"pointer"}} data-toggle="modal" data-target="#descModal" onClick={this.renderInfo.bind(this,element)}/>
                         </div>
                     )
                 }
@@ -112,7 +112,7 @@ class Searchfriend extends Component{
                                         <div className="col-xs-6 col-sm-8 col-lg-8">
                                             <span>Name : </span><span>{this.state.name}</span> <br/><br/>
                                             <span>Batch : </span><span>{this.state.batch}</span> <br/><br/>
-                                            <span>Email : </span><span>{this.state.email}</span> <br/><br/>
+                                            <span>Description : </span><span>{this.state.description}</span> <br/><br/>
                                             <span>Profession : </span><span>{this.state.profession}</span> <br/><br/>
                                         </div>
                                     </div>
