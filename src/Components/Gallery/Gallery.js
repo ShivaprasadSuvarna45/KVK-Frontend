@@ -65,19 +65,19 @@ class Gallery extends Component{
                         <div className="row">
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1991</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158792/IMG-20140620-WA0004.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158792/IMG-20140620-WA0004.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1991</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158837/IMG-20160718-WA0015.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158837/IMG-20160718-WA0015.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                             <p className="subtext">1992</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158907/FB_IMG_1523598939006.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158907/FB_IMG_1523598939006.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1993</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158979/IMG-20160426-WA0015.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527158979/IMG-20160426-WA0015.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                         </div>
                     </div>
@@ -85,19 +85,19 @@ class Gallery extends Component{
                         <div className="row">
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1993</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159131/IMG-20160414-WA0009.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159131/IMG-20160414-WA0009.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">1996</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159757/image2.png" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159757/image2.png" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
-                            <p className="subtext">1997</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159867/image1.jpg" style={{width:"100%"}} />
+                                <p className="subtext">1997</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159867/image1.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
-                                <p className="subtext">2001</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159956/3033_82289864523_5413795_n.jpg" style={{width:"100%"}} />
+                                <p className="subtext">2000</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528950068/Batch_2000_10thA.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                         </div>
                     </div>
@@ -105,23 +105,88 @@ class Gallery extends Component{
                     <div className="container" style={{paddingBottom:"3%"}} >
                         <div className="row">
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
-                                <p className="subtext">2002</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160101/KVK_2002.jpg" style={{width:"100%"}} />
+                                <p className="subtext">2001</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527159956/3033_82289864523_5413795_n.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
                                 <p className="subtext">2002</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160136/KVK-2002.jpg" style={{width:"100%"}} />
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160101/KVK_2002.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
-                            <p className="subtext">2003</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160197/2018-04-26-PHOTO-00000006.jpg" style={{width:"100%"}} />
+                                <p className="subtext">2002</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160136/KVK-2002.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                             <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
-                                <p className="subtext">2004</p>
-                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160263/KVK_2004_Batch_10B_2.jpg" style={{width:"100%"}} />
+                                <p className="subtext">2003</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160197/2018-04-26-PHOTO-00000006.jpg" style={{width:"100%",height:"190px"}} />
                             </div>
                         </div>
                     </div>
+
+                    <div className="container" style={{paddingBottom:"3%"}} >
+                        <div className="row">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2004</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1527160263/KVK_2004_Batch_10B_2.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2004</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528950706/KVK_2004_Batch_10B_1.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2006</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528950900/Batch_of_2006.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2006</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528950981/KVK.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div className="container" style={{paddingBottom:"3%"}} >
+                        <div className="row">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2007</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528951395/FB_IMG_1523246074854.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2008</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528951510/IMG_5110.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2008</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528951527/KVK_2008.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2010</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528951763/1524717362055_IMG_0044-1.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="container" style={{paddingBottom:"3%"}} >
+                        <div className="row">
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2011</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528951879/c4671c06-c012-4d01-bda8-d0be2861aebe.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2014</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528952217/FB_IMG_1522990039763.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2015</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528953140/20180426_140039.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                            <div className="col-sm-3 col-lg-3" style={{textAlign:"center"}}>
+                                <p className="subtext">2015</p>
+                                <img src="http://res.cloudinary.com/doifpsy95/image/upload/v1528953201/1524759142515_20180426_135912.jpg" style={{width:"100%",height:"190px"}} />
+                            </div>
+                        </div>
+                    </div>
+
 
                 <Footer/>
             </div>
