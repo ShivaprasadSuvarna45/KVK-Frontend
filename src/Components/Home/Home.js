@@ -19,6 +19,9 @@ class Home extends Component{
 	}
 
 	componentDidMount(){
+   
+    window.scrollTo(0, 0);
+  
     API_UTIL.getAllRecords();
     let _that = this;
 
@@ -55,7 +58,7 @@ class Home extends Component{
 
     this.render_slick = <div></div>
     this.render_table = <div></div>
-    console.log(this.props.album_profile);
+    //console.log(this.props.album_profile);
     if(this.props.album_profile.length > 3){
           this.render_slick = this.props.album_profile.map((ele,index) => {
             return(              

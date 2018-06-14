@@ -27,6 +27,7 @@ class Profile extends Component{
     }
 
     componentDidMount(){    
+        window.scrollTo(0, 0);
         cloudinary.config({ 
             cloud_name: 'doifpsy95', 
             api_key: '512551122167763', 
@@ -49,7 +50,7 @@ class Profile extends Component{
         let updVal = {}
         updVal.email = this.props.userDetails.email;
         updVal.name = document.getElementById("updname").value.trim();
-        updVal.branch = document.getElementById("updbranch").value.trim();
+        updVal.batch = document.getElementById("updbranch").value.trim();
         updVal.city = document.getElementById("updcity").value.trim();
         updVal.country = document.getElementById("updcountry").value.trim();
 

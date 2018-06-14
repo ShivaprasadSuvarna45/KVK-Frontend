@@ -47,6 +47,8 @@ class Searchfriend extends Component{
     }
 
     componentDidMount(){
+        window.scrollTo(0, 0);
+        
         let searchData = {};
         searchData.username = "";
         searchData.attend_event = "";
