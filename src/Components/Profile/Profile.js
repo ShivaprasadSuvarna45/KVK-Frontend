@@ -29,9 +29,9 @@ class Profile extends Component{
     componentDidMount(){    
         window.scrollTo(0, 0);
         cloudinary.config({ 
-            cloud_name: 'doifpsy95', 
-            api_key: '512551122167763', 
-            api_secret: 'z-o3BS3F8VtbViNk8U9KO7lGIHo' 
+            cloud_name: 'dmtm7a4ub', 
+            api_key: '267941476571689', 
+            api_secret: '9lFuD8ozoJZc-O8xGABfsSxCa8M' 
         });
         //console.log(this.props.userDetails);
         if(this.props.userDetails.username){
